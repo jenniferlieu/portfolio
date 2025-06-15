@@ -1,7 +1,8 @@
+import Section from "./layout/Section";
+
 export const Contact = () => {
   return (
-    <section className="py-12 border-b border-gray-200">
-      <h2 className="text-center text-2xl font-bold mb-10">Let's Connect</h2>
+    <Section title="Contact">
       <div className="flex flex-col items-center text-center">
         <div className="mb-4">
           <span className="block mb-1">Send me a message:</span>
@@ -21,6 +22,6 @@ export const Contact = () => {
           </a>
         </div>
       </div>
-    </section>
+    </Section>
   );
 };

@@ -1,7 +1,7 @@
-import MailIcon from "../assets/MailIcon.svg";
-import GithubIcon from "../assets/GithubIcon.svg";
-import LinkedinIcon from "../assets/LinkedinIcon.svg";
-import FileTextIcon from "../assets/FileTextIcon.svg";
+import MailIcon from "../../assets/MailIcon.svg";
+import GithubIcon from "../../assets/GithubIcon.svg";
+import LinkedinIcon from "../../assets/LinkedinIcon.svg";
+import FileTextIcon from "../../assets/FileTextIcon.svg";
 
 export const Footer = () => {
   return (
