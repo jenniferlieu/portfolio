@@ -1,4 +1,4 @@
-export const TerminalCard = () => {
+export default function TerminalCard() {
   const commandBlock = [
     {
       command: "info",
@@ -53,4 +53,4 @@ export const TerminalCard = () => {
       </div>
     </div>
   );
-};
+}

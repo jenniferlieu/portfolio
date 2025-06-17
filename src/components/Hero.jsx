@@ -1,4 +1,4 @@
-import { TerminalCard } from "./TerminalCard";
+import TerminalCard from "./TerminalCard";
 import Section from "./layout/Section";
 import IconLinks from "./IconLinks";
 
