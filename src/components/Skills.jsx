@@ -1,7 +1,7 @@
 import Section from "./layout/Section";
-import { SkillCard } from "./SkillCard";
+import SkillCard from "./SkillCard";
 
-export const Skills = () => {
+export default function Skills() {
   const frontendSkills = {
     title: "Frontend Development",
     description:
@@ -53,4 +53,4 @@ export const Skills = () => {
       </div>
     </Section>
   );
-};
+}
