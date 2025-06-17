@@ -1,6 +1,7 @@
-import { SkillCard } from "./SkillCard";
+import Section from "./layout/Section";
+import SkillCard from "./SkillCard";
 
-export const Skills = () => {
+export default function Skills() {
   const frontendSkills = {
     title: "Frontend Development",
     description:
@@ -43,14 +44,13 @@ export const Skills = () => {
     technologies: ["Git", "GitHub Actions", "Docker", "Vercel", "Netlify"],
   };
   return (
-    <section className="py-12 border-t border-b border-gray-200">
-      <h2 className="text-center text-2xl font-bold mb-10">Skills</h2>
+    <Section title="Skills">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <SkillCard {...frontendSkills} />
         <SkillCard {...backendSkills} />
         <SkillCard {...softwareSkills} />
         <SkillCard {...devopsSkills} />
       </div>
-    </section>
+    </Section>
   );
-};
+}

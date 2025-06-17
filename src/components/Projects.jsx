@@ -1,6 +1,7 @@
-import { ProjectCard } from "./ProjectCard";
+import Section from "./layout/Section";
+import ProjectCard from "./ProjectCard";
 
-export const Projects = () => {
+export default function Projects() {
   const project1 = {
     category: "LOMD",
     title: "Bridging Gamers Through Real-World Connections",
@@ -30,14 +31,11 @@ export const Projects = () => {
     image: "https://placehold.co/600x400/e2e8f0/e2e8f0",
   };
   return (
-    <section className="py-12 border-b border-gray-200">
-      <h2 className="text-center text-2xl font-bold mb-10">
-        Featured Projects
-      </h2>
+    <Section title="Projects">
       <div className="space-y-10">
         <ProjectCard {...project1} />
         <ProjectCard {...project2} />
       </div>
-    </section>
+    </Section>
   );
-};
+}
