@@ -3,39 +3,44 @@ import GithubIcon from "../assets/GithubIcon.svg";
 import LinkedinIcon from "../assets/LinkedinIcon.svg";
 import FileTextIcon from "../assets/FileTextIcon.svg";
 
+import PropTypes from "prop-types";
 import Link from "next/link";
 
-export default function IconLinks() {
+export default function IconLinks({ size = 25 }) {
   const socialLinks = [
     {
       key: "email",
       link: "mailto:example@example.com",
-      icon: <MailIcon width={20} height={20} />,
+      icon: <MailIcon width={size + 3} height={size + 3} />,
     },
     {
       key: "linkedin",
       link: "https://linkedin.com/in/username",
-      icon: <LinkedinIcon width={20} height={20} />,
+      icon: <LinkedinIcon width={size} height={size} />,
     },
     {
       key: "github",
       link: "https://github.com/username",
-      icon: <GithubIcon width={20} height={20} />,
+      icon: <GithubIcon width={size} height={size} />,
     },
   ];
 
-  const iconStyles = "text-gray-600 hover:text-gray-900";
+  const iconStyles = "text-text hover:text-primary";
 
   return (
-    <div className="flex space-x-6 mb-4">
+    <div className="flex gap-4">
       {socialLinks.map((linkObj) => (
         <a key={linkObj.key} href={linkObj.link} className={iconStyles}>
           {linkObj.icon}
         </a>
       ))}
       <Link href="/resume.pdf" className={iconStyles}>
-        <FileTextIcon width={20} height={20} />
+        <FileTextIcon width={size} height={size} />
       </Link>
     </div>
   );
 }
+
+IconLinks.propTypes = {
+  size: PropTypes.number,
+};
