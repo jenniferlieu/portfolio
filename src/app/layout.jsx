@@ -1,4 +1,4 @@
-import { Public_Sans, Geist_Mono } from "next/font/google";
+import { Public_Sans, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "../components/layout/Header";
 import Footer from "../components/layout/Footer";
@@ -8,8 +8,9 @@ const publicSans = Public_Sans({
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const ibmPlexMono = IBM_Plex_Mono({
+  variable: "--font-ibm-plex-mono",
+  weight: "400",
   subsets: ["latin"],
 });
 
@@ -28,7 +29,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className="scroll-smooth">
       <body
-        className={`${publicSans.variable} ${geistMono.variable} font-sans text-text antialiased`}>
+        className={`${publicSans.variable} ${ibmPlexMono.variable} font-sans text-text antialiased`}>
         <Header />
         {children}
         <Footer />

@@ -17,7 +17,7 @@
 
 @theme inline {
   --font-sans: var(--font-public-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-mono: var(--font-ibm-plex-mono);
 
   --color-background: var(--background);
 

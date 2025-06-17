@@ -19,9 +19,9 @@ export default function TerminalCard() {
   ];
 
   return (
-    <div className="border border-gray-300 rounded-lg overflow-hidden shadow-md">
+    <div className="border border-border rounded-lg overflow-hidden">
       {/* terminal header */}
-      <div className="bg-gray-100 p-2 border-b border-gray-300 flex items-center">
+      <div className="py-2 px-4 flex items-center">
         <div className="flex space-x-1.5">
           <div className="w-3 h-3 bg-red-400 rounded-full"></div>
           <div className="w-3 h-3 bg-yellow-400 rounded-full"></div>
@@ -30,11 +30,11 @@ export default function TerminalCard() {
       </div>
 
       {/* terminal interface */}
-      <div className="bg-white p-4 font-mono text-sm">
+      <div className="py-4 px-6 bg-bg-light p-4 font-mono text-xs">
         {commandBlock.map((obj) => (
           <div key={obj.command}>
             {/* command */}
-            <p className="text-gray-500">&gt; {obj.command}</p>
+            <p className="text-text-muted">&gt; {obj.command}</p>
 
             {/* output */}
             {Object.entries(obj.output).map(([key, value]) => (
@@ -45,7 +45,7 @@ export default function TerminalCard() {
                   paddingLeft: `${key.length + 2}ch`,
                   textIndent: `-${key.length + 2}ch`,
                 }}>
-                <span className="text-orange-500">{key}:</span> {value}
+                <span className="text-primary">{key}:</span> {value}
               </p>
             ))}
           </div>
