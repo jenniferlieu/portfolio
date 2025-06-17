@@ -1,7 +1,7 @@
 import Section from "./layout/Section";
-import { ProjectCard } from "./ProjectCard";
+import ProjectCard from "./ProjectCard";
 
-export const Projects = () => {
+export default function Projects() {
   const project1 = {
     category: "LOMD",
     title: "Bridging Gamers Through Real-World Connections",
@@ -38,4 +38,4 @@ export const Projects = () => {
       </div>
     </Section>
   );
-};
+}
