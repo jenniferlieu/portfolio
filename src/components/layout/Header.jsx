@@ -1,34 +1,38 @@
-export const Header = () => {
+import Link from "next/link";
+
+export default function Header() {
+  const navLinks = ["About", "Skills", "Projects", "Contact"];
+  const headerLinkStyles = "hover:text-gray-900";
+
   return (
-    <header className="sticky top-0 z-50 border-b border-gray-200/50 bg-white/80 backdrop-blur-md">
-      <div className="max-w-6xl mx-auto px-4 flex justify-between items-center py-4">
+    <header className="sticky top-0 z-50 border-b border-gray-200/50 bg-white/80 backdrop-blur-md text-gray-600">
+      <div className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+        {/* logo */}
         <div className="flex items-center">
-          <span className="text-gray-600 hover:text-gray-900">
+          <Link href="/" className={headerLinkStyles}>
             🍊 Jennifer Lieu
-          </span>
+          </Link>
         </div>
+
+        {/* nav links */}
         <nav className="hidden md:flex items-center space-x-6">
-          <a href="#about" className="text-gray-600 hover:text-gray-900">
-            About
-          </a>
-          <a href="#skills" className="text-gray-600 hover:text-gray-900">
-            Skills
-          </a>
-          <a href="#projects" className="text-gray-600 hover:text-gray-900">
-            Projects
-          </a>
-          <a href="#contact" className="text-gray-600 hover:text-gray-900">
-            Contact
-          </a>
+          {navLinks.map((link, index) => (
+            <Link
+              key={link}
+              href={`/#${link.toLowerCase()}`}
+              className={headerLinkStyles}>
+              {link}
+            </Link>
+          ))}
         </nav>
+
+        {/* external links, other */}
         <div className="flex items-center space-x-4">
-          <a
-            href="#resume"
-            className="text-gray-600 hover:text-gray-900 font-medium">
+          <Link href="#resume" className={headerLinkStyles}>
             Resume
-          </a>
+          </Link>
         </div>
       </div>
     </header>
   );
-};
+}
