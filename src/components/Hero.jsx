@@ -4,7 +4,7 @@ import IconLinks from "./IconLinks";
 
 export default function Hero() {
   return (
-    <Section>
+    <Section id="about">
       <div className="flex flex-col md:flex-row items-center justify-between gap-10">
         <div className="md:w-7/12">
           <h2 className="text-lg font-mono mb-2">HELLO, WORLD! 👋</h2>

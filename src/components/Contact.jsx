@@ -3,7 +3,7 @@ import ContactBlock from "./ContactBlock";
 
 export default function Contact() {
   return (
-    <Section title="Contact">
+    <Section id="contact" title="Contact">
       <div className="flex flex-col items-center text-center gap-8">
         {/* email */}
         <ContactBlock

@@ -31,7 +31,7 @@ export default function Projects() {
     image: "https://placehold.co/600x400/e2e8f0/e2e8f0",
   };
   return (
-    <Section title="Projects">
+    <Section id="projects" title="Projects">
       <div className="space-y-10">
         <ProjectCard {...project1} />
         <ProjectCard {...project2} />

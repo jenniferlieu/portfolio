@@ -44,7 +44,7 @@ export default function Skills() {
     technologies: ["Git", "GitHub Actions", "Docker", "Vercel", "Netlify"],
   };
   return (
-    <Section title="Skills">
+    <Section id="skills" title="Skills">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <SkillCard {...frontendSkills} />
         <SkillCard {...backendSkills} />

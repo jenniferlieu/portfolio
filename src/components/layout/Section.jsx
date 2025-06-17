@@ -1,8 +1,8 @@
 import PropTypes from "prop-types";
 
-export default function Section({ children, title }) {
+export default function Section({ children, id, title }) {
   return (
-    <section>
+    <section id={id}>
       {/* section title */}
       {title ? (
         <div className="flex justify-between items-center gap-4">
@@ -21,5 +21,6 @@ export default function Section({ children, title }) {
 }
 
 Section.propTypes = {
+  id: PropTypes.string,
   title: PropTypes.string,
 };
