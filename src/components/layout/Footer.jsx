@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="mx-auto px-4 flex flex-col items-center gap-2">
         <IconLinks />
         <p className="text-xs text-text-muted">
-          Designed in Figma, built by me • using React and Tailwind CSS.
+          Designed in Figma, built by me ✦ using React and Tailwind CSS.
         </p>
       </div>
     </footer>
