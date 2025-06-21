@@ -1,4 +1,5 @@
-import { Public_Sans, IBM_Plex_Mono } from "next/font/google";
+import { Public_Sans } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import Header from "../components/layout/Header";
 import Footer from "../components/layout/Footer";
@@ -8,10 +9,65 @@ const publicSans = Public_Sans({
   subsets: ["latin"],
 });
 
-const ibmPlexMono = IBM_Plex_Mono({
-  variable: "--font-ibm-plex-mono",
-  weight: "400",
-  subsets: ["latin"],
+const sfMono = localFont({
+  src: [
+    {
+      path: "../fonts/sf-mono/SFMonoLight.woff",
+      weight: "300",
+      style: "normal",
+    },
+    {
+      path: "../fonts/sf-mono/SFMonoLightItalic.woff",
+      weight: "300",
+      style: "italic",
+    },
+    {
+      path: "../fonts/sf-mono/SFMonoRegular.woff",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../fonts/sf-mono/SFMonoRegularItalic.woff",
+      weight: "400",
+      style: "italic",
+    },
+    {
+      path: "../fonts/sf-mono/SFMonoMedium.woff",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "../fonts/sf-mono/SFMonoMediumItalic.woff",
+      weight: "500",
+      style: "italic",
+    },
+    {
+      path: "../fonts/sf-mono/SFMonoSemibold.woff",
+      weight: "600",
+      style: "normal",
+    },
+    {
+      path: "../fonts/sf-mono/SFMonoMediumItalic.woff",
+      weight: "600",
+      style: "italic",
+    },
+    {
+      path: "../fonts/sf-mono/SFMonoBold.woff",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "../fonts/sf-mono/SFMonoHeavy.woff",
+      weight: "800",
+      style: "normal",
+    },
+    {
+      path: "../fonts/sf-mono/SFMonoHeavyItalic.woff",
+      weight: "800",
+      style: "italic",
+    },
+  ],
+  variable: "--font-sf-mono",
 });
 
 export const metadata = {
@@ -29,7 +85,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className="scroll-smooth">
       <body
-        className={`${publicSans.variable} ${ibmPlexMono.variable} font-sans text-text antialiased`}>
+        className={`${publicSans.className} ${sfMono.variable} bg-bg-light text-text antialiased`}>
         <Header />
         {children}
         <Footer />

@@ -2,7 +2,7 @@
 
 :root {
   --bg-dark: hsl(0, 0%, 90%);
-  --bg: hsl(0, 0%, 95%);
+  --bg: hsl(0, 0%, 93%);
   --bg-light: hsl(0, 0%, 100%);
 
   --text: hsl(31, 0%, 15%);
@@ -10,14 +10,14 @@
 
   --border: hsl(31, 21%, 27%);
   --border-muted: hsl(31, 14%, 84%);
-
+  
   --primary: hsl(28, 100%, 50%);
   --secondary: hsl(95 30% 49%);
 }
 
 @theme inline {
   --font-sans: var(--font-public-sans);
-  --font-mono: var(--font-ibm-plex-mono);
+  --font-mono: var(--font-sf-mono);
 
   --color-background: var(--background);
 
@@ -38,7 +38,7 @@
 /* @media (prefers-color-scheme: dark) {
   :root {
   --bg-dark: hsl(0, 0%, 6%);
-  --bg: hsl(0, 0%, 9%);
+  --bg: hsl(0, 0%, 13%);
   --bg-light: hsl(0, 0%, 15%);
 
   --text: hsl(0, 0%, 90%);
