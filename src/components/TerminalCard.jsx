@@ -30,22 +30,22 @@ export default function TerminalCard() {
       </div>
 
       {/* terminal interface */}
-      <div className="py-4 px-6 bg-bg-light p-4 font-mono text-xs">
+      <div className="p-6 pt-4 font-mono text-xs space-y-4">
         {commandBlock.map((obj) => (
           <div key={obj.command}>
             {/* command */}
-            <p className="text-text-muted">&gt; {obj.command}</p>
+            <p className="text-text">&gt; {obj.command}</p>
 
             {/* output */}
             {Object.entries(obj.output).map(([key, value]) => (
               <p
                 key={key}
-                className="mb-2"
                 style={{
                   paddingLeft: `${key.length + 2}ch`,
                   textIndent: `-${key.length + 2}ch`,
                 }}>
-                <span className="text-primary">{key}:</span> {value}
+                <span className="text-primary">{key}:</span>{" "}
+                <span>{value}</span>
               </p>
             ))}
           </div>

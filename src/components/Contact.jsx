@@ -16,12 +16,10 @@ export default function Contact() {
               <ExternalLink
                 href="mailto:email@example.com"
                 size={20}
-                className="font-bold underline text-xl">
+                className="font-bold underline text-xl text-text hover:text-primary">
                 email@example.com
               </ExternalLink>
-              <span className="block text-lg text-text-muted mt-1">
-                [Copy email]
-              </span>
+              <span className="block text-lg mt-1">[Copy email]</span>
             </div>
           </div>
 
@@ -34,7 +32,7 @@ export default function Contact() {
               <ExternalLink
                 href="https://linkedin.com/in/username"
                 size={20}
-                className="font-bold underline text-xl">
+                className="font-bold underline text-xl text-text hover:text-primary">
                 linkedin.com/in/username
               </ExternalLink>
             </div>

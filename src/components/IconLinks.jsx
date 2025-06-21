@@ -25,10 +25,10 @@ export default function IconLinks({ size = 25 }) {
     },
   ];
 
-  const iconStyles = "text-text hover:text-primary";
+  const iconStyles = "text-border hover:text-primary";
 
   return (
-    <div className="flex gap-4">
+    <div className="inline-flex gap-4">
       {socialLinks.map((linkObj) => (
         <a key={linkObj.key} href={linkObj.link} className={iconStyles}>
           {linkObj.icon}

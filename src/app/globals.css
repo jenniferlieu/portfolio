@@ -9,7 +9,7 @@
   --text-muted: hsl(0, 0%, 30%);
 
   --border: hsl(31, 21%, 27%);
-  --border-muted: hsl(31, 14%, 84%);
+  --border-muted: hsl(31, 14%, 90%);
   
   --primary: hsl(28, 100%, 50%);
   --secondary: hsl(95 30% 49%);
@@ -35,19 +35,16 @@
   --color-secondary: var(--secondary);
 }
 
-/* @media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: dark) {
   :root {
-  --bg-dark: hsl(0, 0%, 6%);
-  --bg: hsl(0, 0%, 13%);
-  --bg-light: hsl(0, 0%, 15%);
+    --bg-dark: hsl(0, 0%, 30%);
+    --bg: hsl(0, 0%, 20%);
+    --bg-light: hsl(0, 0%, 10%);
 
-  --text: hsl(0, 0%, 90%);
-  --text-muted: hsl(0, 0%, 70%);
+    --text: hsl(0, 0%, 90%);
+    --text-muted: hsl(0, 0%, 70%);
 
-  --border: hsl(32, 21%, 27%);
-  --border-muted: hsl(31, 12%, 84%);
-
-  --primary: hsl(31 90% 60%);
-  --secondary: hsl(95 25% 51%);
+    --border: hsl(32, 21%, 45%);
+    --border-muted: hsl(31, 12%, 16%);
   }
-} */
+}
