@@ -7,8 +7,8 @@ export default function Hero() {
     <Section id="about">
       <div className="flex flex-col md:flex-row items-center justify-between gap-10">
         <div className="md:w-10/12 lg:w-7/12">
-          <h2 className="text-text text-lg font-mono mb-2">
-            HELLO, WORLD! <span className="text-2xl">👋</span>
+          <h2 className="text-text text-lg font-mono mb-2 flex items-end gap-1">
+            HELLO, WORLD! <div className="text-2xl animate-wave">👋</div>
           </h2>
           <h1 className="text-text text-4xl font-bold mb-2">
             I'm <span className="text-primary">Jennifer</span>, a{" "}

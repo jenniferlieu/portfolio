@@ -14,7 +14,7 @@ export default function ProjectCard({
   image,
 }) {
   return (
-    <div className="p-6 lg:p-0 border border-border lg:border-none rounded-lg">
+    <div className="p-6 lg:p-0 border border-border lg:border-none rounded-lg shadow-card lg:shadow-none!">
       <div className="flex flex-col lg:flex-row gap-6">
         <div className="relative lg:w-1/2 rounded-lg md:max-h-[400px] h-[200px] md:h-[400px] w-full flex items-center">
           <Image

@@ -19,7 +19,7 @@ export default function TerminalCard() {
   ];
 
   return (
-    <div className="border border-border rounded-lg overflow-hidden">
+    <div className="border border-border rounded-lg overflow-hidden shadow-card">
       {/* terminal header */}
       <div className="py-2 px-4 flex items-center">
         <div className="flex space-x-1.5">
