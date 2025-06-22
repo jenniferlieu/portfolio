@@ -4,16 +4,18 @@ import IconLinks from "./IconLinks";
 
 export default function Hero() {
   return (
-    <Section>
+    <Section id="about">
       <div className="flex flex-col md:flex-row items-center justify-between gap-10">
-        <div className="md:w-7/12">
-          <h2 className="text-lg font-mono mb-2">HELLO, WORLD! 👋</h2>
-          <h1 className="text-4xl font-bold mb-2">
-            I'm <span className="text-orange-500">Jennifer</span>, a{" "}
-            <span className="text-orange-500">full-stack developer</span> &{" "}
-            <span className="text-orange-500">software engineer</span>.
+        <div className="md:w-10/12 lg:w-7/12">
+          <h2 className="text-text text-lg font-mono mb-2 flex items-end gap-1">
+            HELLO, WORLD! <div className="text-2xl animate-wave">👋</div>
+          </h2>
+          <h1 className="text-text text-4xl font-bold mb-2">
+            I'm <span className="text-primary">Jennifer</span>, a{" "}
+            <span className="text-primary">full-stack developer</span> &{" "}
+            <span className="text-primary">software engineer</span>.
           </h1>
-          <p className="text-gray-700 my-6">
+          <p className="my-6">
             I'm a developer with a curiosity for how things work and a passion
             for turning ideas into polished, functional products. That same
             mindset drives how I build. I want my code to be easy to navigate
@@ -21,7 +23,7 @@ export default function Hero() {
           </p>
           <IconLinks />
         </div>
-        <div className="md:w-4/12">
+        <div className="md:w-6/12 lg:w-4/12">
           <TerminalCard />
         </div>
       </div>

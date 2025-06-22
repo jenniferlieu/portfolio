@@ -1,22 +1,26 @@
+import Favicon from "../../assets/favicon.svg";
+
 import Link from "next/link";
+import ExternalLink from "../ExternalLink";
 
 export default function Header() {
   const navLinks = ["About", "Skills", "Projects", "Contact"];
-  const headerLinkStyles = "hover:text-gray-900";
+  const headerLinkStyles = "font-semibold hover:text-primary";
 
   return (
-    <header className="sticky top-0 z-50 border-b border-gray-200/50 bg-white/80 backdrop-blur-md text-gray-600">
-      <div className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+    <header className="sticky top-0 z-50 border-b border-border/50 bg-linear-45 from-bg/20 to-bg/50 backdrop-blur-lg">
+      <div className="max-w-page-width mx-auto p-page-padding-x flex gap-3 justify-between items-center overflow-x-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
         {/* logo */}
-        <div className="flex items-center">
-          <Link href="/" className={headerLinkStyles}>
-            🍊 Jennifer Lieu
-          </Link>
-        </div>
+        <Link
+          href="/"
+          className={`${headerLinkStyles} flex items-center gap-1`}>
+          <Favicon alt="favicon" width={25} height={25} />
+          <span className="hidden md:inline">Jennifer Lieu</span>
+        </Link>
 
         {/* nav links */}
-        <nav className="hidden md:flex items-center space-x-6">
-          {navLinks.map((link, index) => (
+        <nav className="flex items-center gap-3 lg:gap-5">
+          {navLinks.map((link) => (
             <Link
               key={link}
               href={`/#${link.toLowerCase()}`}
@@ -27,10 +31,13 @@ export default function Header() {
         </nav>
 
         {/* external links, other */}
-        <div className="flex items-center space-x-4">
-          <Link href="#resume" className={headerLinkStyles}>
+        <div className="flex items-center gap-3">
+          <ExternalLink
+            href="/resume.pdf"
+            size={17}
+            className={headerLinkStyles}>
             Resume
-          </Link>
+          </ExternalLink>
         </div>
       </div>
     </header>

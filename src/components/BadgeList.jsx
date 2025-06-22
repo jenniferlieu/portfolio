@@ -2,11 +2,11 @@ import PropTypes from "prop-types";
 
 export default function BadgeList({ list }) {
   return (
-    <div className="flex flex-wrap gap-2 mb-6">
+    <div className="flex flex-wrap gap-2">
       {list.map((item) => (
         <span
           key={item}
-          className="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full">
+          className="px-3 py-1 bg-border-muted hover:bg-secondary/30 text-xs font-mono rounded-full">
           {item}
         </span>
       ))}

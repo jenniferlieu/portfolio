@@ -18,7 +18,7 @@ export default function Projects() {
       "Docker",
       "FIGMA",
     ],
-    image: "https://placehold.co/600x400/e2e8f0/e2e8f0",
+    image: "https://placehold.co/600x400/7d7d7d/7d7d7d.png",
   };
   const project2 = {
     category: "OTTOMIX",
@@ -28,11 +28,11 @@ export default function Projects() {
     details:
       "Integrated WebSockets with state management to support real-time gameplay for 30+ concurrent users",
     technologies: ["React", "Go", "WebSockets"],
-    image: "https://placehold.co/600x400/e2e8f0/e2e8f0",
+    image: "https://placehold.co/600x400/7d7d7d/7d7d7d.png",
   };
   return (
-    <Section title="Projects">
-      <div className="space-y-10">
+    <Section id="projects" title="Projects">
+      <div className="space-y-20">
         <ProjectCard {...project1} />
         <ProjectCard {...project2} />
       </div>
