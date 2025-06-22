@@ -1,9 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --bg-dark: hsl(0, 0%, 90%);
-  --bg: hsl(0, 0%, 93%);
-  --bg-light: hsl(0, 0%, 100%);
+  --bg: hsl(0, 0%, 100%);
 
   --text: hsl(31, 0%, 15%);
   --text-muted: hsl(0, 0%, 30%);
@@ -13,17 +11,17 @@
   
   --primary: hsl(28, 100%, 50%);
   --secondary: hsl(95 30% 49%);
+
+  --page-width: 72rem;
+  --page-padding-x: 4;
+  --page-padding-y: 20;
 }
 
 @theme inline {
   --font-sans: var(--font-public-sans);
   --font-mono: var(--font-sf-mono);
 
-  --color-background: var(--background);
-
   --color-bg: var(--bg);
-  --color-bg-dark: var(--bg-dark);
-  --color-bg-light: var(--bg-light);
 
   --color-text: var(--text);
   --color-text-muted: var(--text-muted);
@@ -33,13 +31,15 @@
 
   --color-primary: var(--primary);
   --color-secondary: var(--secondary);
+
+  --spacing-page-width: var(--page-width);
+  --spacing-page-padding-x: calc(var(--spacing) * var(--page-padding-x));
+  --spacing-page-padding-y: calc(var(--spacing) * var(--page-padding-y));
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg-dark: hsl(0, 0%, 30%);
-    --bg: hsl(0, 0%, 20%);
-    --bg-light: hsl(0, 0%, 10%);
+    --bg: hsl(0, 0%, 10%);
 
     --text: hsl(0, 0%, 90%);
     --text-muted: hsl(0, 0%, 70%);

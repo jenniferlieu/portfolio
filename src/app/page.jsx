@@ -5,7 +5,7 @@ import Contact from "../components/Contact";
 
 export default function HomePage() {
   return (
-    <main className="max-w-6xl mx-auto py-20">
+    <main className="max-w-page-width mx-auto py-page-padding-y">
       <Hero />
       <Skills />
       <Projects />

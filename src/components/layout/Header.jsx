@@ -8,8 +8,8 @@ export default function Header() {
   const headerLinkStyles = "font-semibold hover:text-primary";
 
   return (
-    <header className="sticky top-0 z-50 border-b border-border/50 bg-linear-45 from-bg-light/20 to-bg-light/50 backdrop-blur-lg">
-      <div className="max-w-6xl mx-auto px-4 py-4 flex gap-3 justify-between items-center overflow-x-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+    <header className="sticky top-0 z-50 border-b border-border/50 bg-linear-45 from-bg/20 to-bg/50 backdrop-blur-lg">
+      <div className="max-w-page-width mx-auto p-page-padding-x flex gap-3 justify-between items-center overflow-x-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
         {/* logo */}
         <Link
           href="/"

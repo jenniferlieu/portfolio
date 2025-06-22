@@ -85,7 +85,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className="scroll-smooth">
       <body
-        className={`${publicSans.variable} ${sfMono.variable} font-sans bg-bg-light text-text-muted antialiased`}>
+        className={`${publicSans.variable} ${sfMono.variable} font-sans bg-bg text-text-muted antialiased`}>
         <Header />
         {children}
         <Footer />
