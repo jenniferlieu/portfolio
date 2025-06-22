@@ -1,3 +1,5 @@
+import { withContentlayer } from "next-contentlayer2";
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
@@ -37,6 +39,7 @@ const nextConfig = {
 
     return config;
   },
+  reactStrictMode: true,
 };
 
-export default nextConfig;
+export default withContentlayer(nextConfig);
