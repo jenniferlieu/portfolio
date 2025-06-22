@@ -5,7 +5,7 @@ import Contact from "../components/Contact";
 
 export default function HomePage() {
   return (
-    <main className="flex-grow max-w-6xl mx-auto py-20 w-full space-y-20">
+    <main className="max-w-6xl mx-auto py-20">
       <Hero />
       <Skills />
       <Projects />

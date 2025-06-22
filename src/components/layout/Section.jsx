@@ -5,7 +5,7 @@ export default function Section({ children, id, title }) {
     <section id={id}>
       {/* section title */}
       {title ? (
-        <div className="flex justify-between items-center gap-4">
+        <div className="flex justify-between items-center gap-4 pt-20">
           <hr className="flex-grow border-border" />
           <h2 className="text-text text-xl font-bold font-mono">{title}</h2>
           <hr className="flex-grow border-border" />
