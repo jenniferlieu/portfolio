@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "prepare": "husky"
+    "prepare": "husky",
+    "build:content": "contentlayer2 build"
   },
   "dependencies": {
     "contentlayer2": "^0.5.8",
