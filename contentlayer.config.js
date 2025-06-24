@@ -36,6 +36,7 @@ const Skill = defineDocumentType(() => ({
   fields: {
     category: { type: "string", required: true },
     description: { type: "string", required: true },
+    order: { type: "number", required: false },
     skills: { type: "list", of: { type: "string" }, required: true },
   },
 }));

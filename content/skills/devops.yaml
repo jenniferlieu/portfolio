@@ -1,0 +1,8 @@
+category: "DevOps"
+description: "I believe in automating the boring stuff. I've started integrating DevOps practices like CI/CD into my workflows to improve reliability and speed up deployments."
+order: 4
+skills:
+  - GitHub Actions
+  - Docker
+  - Vercel
+  - Netlify

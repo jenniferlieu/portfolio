@@ -1,12 +1,12 @@
 import PropTypes from "prop-types";
 import BadgeList from "./BadgeList";
 
-export default function SkillCard({ title, description, technologies }) {
+export default function SkillCard({ category, description, skills }) {
   return (
     <div className="border border-border rounded-lg p-6 shadow-card">
-      <h3 className="text-text font-bold mb-2">{title}</h3>
+      <h3 className="text-text font-bold mb-2">{category}</h3>
       <p className="mb-4">{description}</p>
-      <BadgeList list={technologies} />
+      <BadgeList list={skills} />
     </div>
   );
 }
