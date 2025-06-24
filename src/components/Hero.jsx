@@ -1,8 +1,10 @@
 import TerminalCard from "./TerminalCard";
 import Section from "./layout/Section";
 import IconLinks from "./IconLinks";
+import { allAbouts } from "contentlayer/generated";
 
 export default function Hero() {
+  const about = allAbouts[0];
   return (
     <Section id="about">
       <div className="flex flex-col md:flex-row items-center justify-between gap-10">
@@ -11,16 +13,17 @@ export default function Hero() {
             HELLO, WORLD! <div className="text-2xl animate-wave">👋</div>
           </h2>
           <h1 className="text-text text-4xl font-bold mb-2">
-            I'm <span className="text-primary">Jennifer</span>, a{" "}
-            <span className="text-primary">full-stack developer</span> &{" "}
-            <span className="text-primary">software engineer</span>.
+            I'm <span className="text-primary">{about.firstName}</span>, a{" "}
+            <span className="text-primary">
+              {about.jobTitle[0].toLowerCase()}
+            </span>{" "}
+            &{" "}
+            <span className="text-primary">
+              {about.jobTitle[1].toLowerCase()}
+            </span>
+            .
           </h1>
-          <p className="my-6">
-            I'm a developer with a curiosity for how things work and a passion
-            for turning ideas into polished, functional products. That same
-            mindset drives how I build. I want my code to be easy to navigate
-            and my solutions built for both users and developers.
-          </p>
+          <p className="my-6">{about.blurb}</p>
           <IconLinks />
         </div>
         <div className="md:w-6/12 lg:w-4/12">

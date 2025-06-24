@@ -18,22 +18,14 @@ const SiteInfo = defineDocumentType(() => ({
 
 const About = defineDocumentType(() => ({
   name: "About",
-  filePathPattern: `about/about.yaml`,
-  contentType: "data",
+  filePathPattern: `about/about.mdx`,
+  contentType: "mdx",
   fields: {
-    name: { type: "string", required: true },
+    firstName: { type: "string", required: true },
+    lastName: { type: "string", required: true },
     jobTitle: { type: "list", of: { type: "string" }, required: true },
     blurb: { type: "string", required: true },
-  },
-}));
-
-const Facts = defineDocumentType(() => ({
-  name: "Facts",
-  filePathPattern: `about/facts/*.yaml`,
-  contentType: "data",
-  fields: {
-    category: { type: "string", required: true },
-    info: { type: "json", required: true },
+    facts: { type: "json", required: true },
   },
 }));
 
@@ -50,7 +42,7 @@ const Skill = defineDocumentType(() => ({
 
 export default makeSource({
   contentDirPath: "content",
-  documentTypes: [SiteInfo, About, Facts, Skill],
+  documentTypes: [SiteInfo, About, Skill],
   mdx: {
     remarkPlugins: [remarkGfm],
     rehypePlugins: [rehypeSlug, rehypeAutolinkHeadings],
