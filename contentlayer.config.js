@@ -41,9 +41,24 @@ const Skill = defineDocumentType(() => ({
   },
 }));
 
+const Project = defineDocumentType(() => ({
+  name: "Project",
+  filePathPattern: `projects/*.mdx`,
+  contentType: "mdx",
+  fields: {
+    title: { type: "string", required: true },
+    slug: { type: "string", required: true },
+    image: { type: "string", required: true },
+    headline: { type: "string", required: true },
+    description: { type: "string", required: true },
+    impact: { type: "string", required: true },
+    skills: { type: "list", of: { type: "string" }, required: true },
+  },
+}));
+
 export default makeSource({
   contentDirPath: "content",
-  documentTypes: [SiteInfo, About, Skill],
+  documentTypes: [SiteInfo, About, Skill, Project],
   mdx: {
     remarkPlugins: [remarkGfm],
     rehypePlugins: [rehypeSlug, rehypeAutolinkHeadings],
