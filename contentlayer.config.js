@@ -56,9 +56,21 @@ const Project = defineDocumentType(() => ({
   },
 }));
 
+const Contact = defineDocumentType(() => ({
+  name: "Contact",
+  filePathPattern: `contact.yaml`,
+  contentType: "data",
+  fields: {
+    emailHandle: { type: "string", required: true },
+    emailDomain: { type: "string", required: true },
+    github: { type: "string", required: true },
+    linkedin: { type: "string", required: true },
+  },
+}));
+
 export default makeSource({
   contentDirPath: "content",
-  documentTypes: [SiteInfo, About, Skill, Project],
+  documentTypes: [SiteInfo, About, Skill, Project, Contact],
   mdx: {
     remarkPlugins: [remarkGfm],
     rehypePlugins: [rehypeSlug, rehypeAutolinkHeadings],

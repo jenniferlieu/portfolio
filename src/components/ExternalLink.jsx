@@ -4,7 +4,10 @@ import ArrowRightIcon from "../assets/ArrowRightIcon.svg";
 
 export default function ExternalLink({ children, href, className, size }) {
   return (
-    <a href={href} className={`group flex items-center ${className}`}>
+    <a
+      href={href}
+      target="_blank"
+      className={`group flex items-center ${className}`}>
       <span>{children}</span>
       <span className="ml-1">
         <ArrowRightIcon
