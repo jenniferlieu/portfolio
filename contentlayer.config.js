@@ -16,6 +16,16 @@ const SiteInfo = defineDocumentType(() => ({
   },
 }));
 
+const NavLinks = defineDocumentType(() => ({
+  name: "NavLinks",
+  filePathPattern: `nav-links.yaml`,
+  contentType: "data",
+  fields: {
+    internalLinks: { type: "json", required: true },
+    externalLinks: { type: "json", required: true },
+  },
+}));
+
 const About = defineDocumentType(() => ({
   name: "About",
   filePathPattern: `about/about.mdx`,
@@ -70,7 +80,7 @@ const Contact = defineDocumentType(() => ({
 
 export default makeSource({
   contentDirPath: "content",
-  documentTypes: [SiteInfo, About, Skill, Project, Contact],
+  documentTypes: [SiteInfo, NavLinks, About, Skill, Project, Contact],
   mdx: {
     remarkPlugins: [remarkGfm],
     rehypePlugins: [rehypeSlug, rehypeAutolinkHeadings],
