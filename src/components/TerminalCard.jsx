@@ -1,22 +1,7 @@
+import { allAbouts } from "contentlayer/generated";
+
 export default function TerminalCard() {
-  const commandBlock = [
-    {
-      command: "info",
-      output: {
-        name: "Jennifer Lieu",
-        education: "B.S. Computer Science from Temple University",
-        timezone: "Eastern Time [EST, UTC-5] [EDT, UTC-4]",
-        interests:
-          "anime, reading, books, beach, summer, sunshine, journaling, planners, orange juice, watercolor",
-      },
-    },
-    {
-      command: "status",
-      output: {
-        200: "Open for work in web development and software engineering",
-      },
-    },
-  ];
+  const factsObj = allAbouts[0].facts;
 
   return (
     <div className="border border-border rounded-lg overflow-hidden shadow-card">
@@ -31,13 +16,13 @@ export default function TerminalCard() {
 
       {/* terminal interface */}
       <div className="p-6 pt-4 font-mono text-xs space-y-4">
-        {commandBlock.map((obj) => (
-          <div key={obj.command}>
+        {Object.entries(factsObj).map(([key, value]) => (
+          <div key={key}>
             {/* command */}
-            <p className="text-text">&gt; {obj.command}</p>
+            <p className="text-text">&gt; {key}</p>
 
             {/* output */}
-            {Object.entries(obj.output).map(([key, value]) => (
+            {Object.entries(value).map(([key, value]) => (
               <p
                 key={key}
                 style={{
@@ -45,7 +30,7 @@ export default function TerminalCard() {
                   textIndent: `-${key.length + 2}ch`,
                 }}>
                 <span className="text-primary">{key}:</span>{" "}
-                <span>{value}</span>
+                <span dangerouslySetInnerHTML={{ __html: value }} />
               </p>
             ))}
           </div>

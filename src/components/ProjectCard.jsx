@@ -6,12 +6,13 @@ import ArrowRightIcon from "../assets/ArrowRightIcon.svg";
 import BadgeList from "./BadgeList";
 
 export default function ProjectCard({
-  category,
   title,
-  description,
-  details,
-  technologies,
+  slug,
   image,
+  headline,
+  description,
+  impact,
+  skills,
 }) {
   return (
     <div className="p-6 lg:p-0 border border-border lg:border-none rounded-lg shadow-card lg:shadow-none!">
@@ -26,14 +27,14 @@ export default function ProjectCard({
         </div>
         <div className="lg:w-1/2 space-y-6">
           <span className="text-primary text-sm font-medium">
-            {category.toUpperCase()}
+            {title.toUpperCase()}
           </span>
-          <h2 className="text-text font-bold text-2xl mt-1 mb-3">{title}</h2>
+          <h2 className="text-text font-bold text-2xl mt-1 mb-3">{headline}</h2>
           <p>{description}</p>
-          <p>{details}</p>
-          {<BadgeList list={technologies} />}
+          <p>{impact}</p>
+          {<BadgeList list={skills} />}
           <Link
-            href={`/project/${category}`}
+            href={`/project/${slug}`}
             className="group inline-flex items-center gap-1 px-4 py-2 text-sm font-semibold text-primary border border-primary rounded-lg hover:bg-primary hover:text-white duration-100 transition-colors">
             View Case Study
             <ArrowRightIcon
@@ -49,10 +50,11 @@ export default function ProjectCard({
 }
 
 ProjectCard.propTypes = {
-  category: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-  details: PropTypes.string.isRequired,
-  technologies: PropTypes.arrayOf(PropTypes.string).isRequired,
+  slug: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
+  headline: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  impact: PropTypes.string.isRequired,
+  skills: PropTypes.arrayOf(PropTypes.string).isRequired,
 };

@@ -2,9 +2,14 @@ import Favicon from "../../assets/favicon.svg";
 
 import Link from "next/link";
 import ExternalLink from "../ExternalLink";
+import { allNavLinks } from "contentlayer/generated";
 
 export default function Header() {
-  const navLinks = ["About", "Skills", "Projects", "Contact"];
+  const navLinks = allNavLinks[0];
+  const internalLinks = navLinks.internalLinks;
+  const externalLinks = navLinks.externalLinks;
+  const faviconSize = 25;
+  const externalLinkArrowSize = 17;
   const headerLinkStyles = "font-semibold hover:text-primary";
 
   return (
@@ -14,30 +19,33 @@ export default function Header() {
         <Link
           href="/"
           className={`${headerLinkStyles} flex items-center gap-1`}>
-          <Favicon alt="favicon" width={25} height={25} />
+          <Favicon alt="favicon" width={faviconSize} height={faviconSize} />
           <span className="hidden md:inline">Jennifer Lieu</span>
         </Link>
 
         {/* nav links */}
         <nav className="flex items-center gap-3 lg:gap-5">
-          {navLinks.map((link) => (
+          {Object.entries(internalLinks).map(([key, value]) => (
             <Link
-              key={link}
-              href={`/#${link.toLowerCase()}`}
+              key={value.name}
+              href={value.url}
               className={headerLinkStyles}>
-              {link}
+              {value.name}
             </Link>
           ))}
         </nav>
 
         {/* external links, other */}
         <div className="flex items-center gap-3">
-          <ExternalLink
-            href="/resume.pdf"
-            size={17}
-            className={headerLinkStyles}>
-            Resume
-          </ExternalLink>
+          {Object.entries(externalLinks).map(([key, value]) => (
+            <ExternalLink
+              key={value.name}
+              href={value.url}
+              size={externalLinkArrowSize}
+              className={headerLinkStyles}>
+              {value.name}
+            </ExternalLink>
+          ))}
         </div>
       </div>
     </header>

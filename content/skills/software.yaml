@@ -1,0 +1,13 @@
+category: "Software Development"
+description: "I'm primarily a Java developer, but I'm comfortable working across languages and frameworks. I focus on building systems that are maintainable and extensible"
+order: 3
+skills:
+  - Java
+  - JavaScript
+  - C
+  - Python
+  - Git
+  - Code Review
+  - Jira
+  - Agile
+  - Scrum
