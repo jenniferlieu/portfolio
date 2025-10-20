@@ -3,12 +3,9 @@ internalLinks:
     name: "About"
     url: "/#about"
   link2:
-    name: "Skills"
-    url: "/#skills"
-  link3:
     name: "Projects"
     url: "/#projects"
-  link4:
+  link3:
     name: "Contact"
     url: "/#contact"
 externalLinks:
