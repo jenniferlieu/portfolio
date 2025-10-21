@@ -14,7 +14,7 @@ export default function Contact() {
         <div className="inline-block space-y-12 pt-5">
           {/* email */}
           <div className="flex flex-col sm:flex-row sm:items-start">
-            <div className="w-full text-left text-xl font-medium mb-2 sm:text-right sm:w-48 sm:mb-0">
+            <div className="w-full text-left text-xl font-medium mb-2 sm:text-right sm:w-50 sm:mb-0">
               Send me a message:
             </div>
             <div className="w-full sm:w-auto sm:pl-4">
@@ -36,7 +36,7 @@ export default function Contact() {
 
           {/* linkedin */}
           <div className="flex flex-col sm:flex-row sm:items-start">
-            <div className="w-full text-left text-xl font-medium mb-2 sm:text-right sm:w-48 sm:mb-0">
+            <div className="w-full text-left text-xl font-medium mb-2 sm:text-right sm:w-50 sm:mb-0">
               Connect with me:
             </div>
             <div className="w-full sm:w-auto sm:pl-4">

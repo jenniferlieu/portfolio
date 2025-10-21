@@ -1,4 +1,4 @@
-import { Public_Sans } from "next/font/google";
+import { Public_Sans, Space_Grotesk } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 import Header from "../components/layout/Header";
@@ -7,6 +7,12 @@ import { allSiteInfos } from "contentlayer/generated";
 
 const publicSans = Public_Sans({
   variable: "--font-public-sans",
+  subsets: ["latin"],
+});
+
+const spaceGrotesk = Space_Grotesk({
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-space-grotesk",
   subsets: ["latin"],
 });
 
@@ -102,7 +108,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className="scroll-smooth">
       <body
-        className={`${publicSans.variable} ${sfMono.variable} font-sans bg-bg text-text-muted antialiased`}>
+        className={`${publicSans.variable} ${sfMono.variable} ${spaceGrotesk.variable} font-sans bg-bg text-text-muted antialiased`}>
         <Header />
         {children}
         <Footer />
