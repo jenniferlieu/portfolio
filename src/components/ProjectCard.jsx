@@ -1,9 +1,9 @@
 import Image from "next/image";
-import Link from "next/link";
 
 import PropTypes from "prop-types";
 import ArrowRightIcon from "../assets/ArrowRightIcon.svg";
 import BadgeList from "./BadgeList";
+import ButtonPrimary from "./ButtonPrimary";
 
 export default function ProjectCard({
   title,
@@ -17,12 +17,12 @@ export default function ProjectCard({
   return (
     <div className="p-6 lg:p-0 border border-border lg:border-none rounded-lg shadow-card lg:shadow-none!">
       <div className="flex flex-col lg:flex-row gap-6">
-        <div className="relative lg:w-1/2 rounded-lg md:max-h-[400px] h-[200px] md:h-[400px] w-full flex items-center">
+        <div className="relative lg:w-1/2 rounded-lg md:max-h-[400px] h-[200px] md:h-[400px] w-full flex items-center lg:shadow-card">
           <Image
             src={image || "https://placehold.co/600x400/7d7d7d/7d7d7d.png"}
             alt={title}
             fill
-            className="object-cover w-full h-auto rounded-lg lg:border lg:border-border"
+            className="object-cover w-full h-auto rounded-lg shadow-card lg:border lg:border-border"
           />
         </div>
         <div className="lg:w-1/2 space-y-6">
@@ -33,16 +33,14 @@ export default function ProjectCard({
           <p>{description}</p>
           <p>{impact}</p>
           {<BadgeList list={skills} />}
-          <Link
-            href={`/project/${slug}`}
-            className="group inline-flex items-center gap-1 px-4 py-2 text-sm font-semibold text-primary border border-primary rounded-lg hover:bg-primary hover:text-white duration-100 transition-colors">
+          <ButtonPrimary href={`/project/${slug}`}>
             View Case Study
             <ArrowRightIcon
               width={16}
               height={16}
               className="transition-transform duration-300 group-hover:translate-x-1"
             />
-          </Link>
+          </ButtonPrimary>
         </div>
       </div>
     </div>
