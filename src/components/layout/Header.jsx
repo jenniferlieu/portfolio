@@ -7,9 +7,7 @@ import { allNavLinks } from "contentlayer/generated";
 export default function Header() {
   const navLinks = allNavLinks[0];
   const internalLinks = navLinks.internalLinks;
-  const externalLinks = navLinks.externalLinks;
   const faviconSize = 25;
-  const externalLinkArrowSize = 17;
   const headerLinkStyles = "font-semibold hover:text-primary";
 
   return (
@@ -25,28 +23,12 @@ export default function Header() {
 
         {/* nav links */}
         <nav className="flex items-center gap-3 lg:gap-5">
-          {Object.entries(internalLinks).map(([key, value]) => (
-            <Link
-              key={value.name}
-              href={value.url}
-              className={headerLinkStyles}>
-              {value.name}
+          {internalLinks.map((link, index) => (
+            <Link key={index} href={link.url} className={headerLinkStyles}>
+              {link.label}
             </Link>
           ))}
         </nav>
-
-        {/* external links, other */}
-        <div className="flex items-center gap-3">
-          {Object.entries(externalLinks).map(([key, value]) => (
-            <ExternalLink
-              key={value.name}
-              href={value.url}
-              size={externalLinkArrowSize}
-              className={headerLinkStyles}>
-              {value.name}
-            </ExternalLink>
-          ))}
-        </div>
       </div>
     </header>
   );

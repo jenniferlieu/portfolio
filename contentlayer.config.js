@@ -21,8 +21,8 @@ const NavLinks = defineDocumentType(() => ({
   filePathPattern: `nav-links.yaml`,
   contentType: "data",
   fields: {
-    internalLinks: { type: "json", required: true },
-    externalLinks: { type: "json", required: true },
+    internalLinks: { type: "list", of: { type: "json" }, required: true },
+    externalLinks: { type: "list", of: { type: "json" }, required: false },
   },
 }));
 

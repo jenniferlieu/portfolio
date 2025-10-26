@@ -1,14 +1,7 @@
 internalLinks:
-  link1:
-    name: "About"
+  - label: "About"
     url: "/#about"
-  link2:
-    name: "Projects"
+  - label: "Projects"
     url: "/#projects"
-  link3:
-    name: "Contact"
+  - label: "Contact"
     url: "/#contact"
-externalLinks:
-  link1:
-    name: "Resume"
-    url: "/resume.pdf"

@@ -6,7 +6,8 @@ export default function Footer() {
       <div className="p-page-padding-x flex flex-col items-center gap-2">
         <IconLinks />
         <p className="text-xs">
-          Designed in Figma, built by me ✦ using React and Tailwind CSS.
+          Designed in Figma, built by me ✦ using Next.js, Tailwind CSS, and
+          ContentLayer.
         </p>
       </div>
     </footer>
