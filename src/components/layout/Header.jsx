@@ -7,6 +7,7 @@ export default function Header() {
   const navLinks = allNavLinks[0];
   const internalLinks = navLinks.internalLinks;
   const faviconSize = 25;
+  const headerLinkStyles = "font-semibold";
 
   return (
     <header className="sticky top-0 z-50 border-b border-border/50 bg-linear-45 from-bg/20 to-bg/50 backdrop-blur-lg">
@@ -22,7 +23,7 @@ export default function Header() {
         {/* nav links */}
         <nav className="flex items-center gap-3 lg:gap-5">
           {internalLinks.map((link, index) => (
-            <Link key={index} href={link.url} className="font-semibold">
+            <Link key={index} href={link.url} className={headerLinkStyles}>
               {link.label}
             </Link>
           ))}
