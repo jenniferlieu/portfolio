@@ -100,7 +100,11 @@ export default async function ProjectPage({ params }) {
                   ) : (
                     <div className="flex flex-col">
                       {stat.value.map((link, index) => (
-                        <ExternalLink key={index} href={link.value} size={16}>
+                        <ExternalLink
+                          key={index}
+                          href={link.value}
+                          size={16}
+                          className="underline">
                           {link.label}
                         </ExternalLink>
                       ))}
@@ -118,7 +122,7 @@ export default async function ProjectPage({ params }) {
         </header>
 
         {/* Summary */}
-        <section className="prose dark:prose-invert max-w-none border-border border-t border-b py-8">
+        <section className="prose dark:prose-invert max-w-none border-t border-b border-border py-8">
           <h2>Summary & impact</h2>
           <MDXSummary />
         </section>

@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 
 import ArrowRightIcon from "../assets/ArrowRightIcon.svg";
 
-export default function ExternalLink({ children, href, className, size }) {
+export default function ExternalLink({ children, className, href, size }) {
   return (
     <a
       href={href}
@@ -21,7 +21,7 @@ export default function ExternalLink({ children, href, className, size }) {
 }
 
 ExternalLink.propTypes = {
-  href: PropTypes.string.isRequired,
   className: PropTypes.string,
+  href: PropTypes.string.isRequired,
   size: PropTypes.number.isRequired,
 };
