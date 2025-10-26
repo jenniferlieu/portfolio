@@ -4,20 +4,21 @@ import LinkedinIcon from "../assets/LinkedinIcon.svg";
 import FileTextIcon from "../assets/FileTextIcon.svg";
 import PropTypes from "prop-types";
 import Link from "next/link";
-import { allContacts } from "contentlayer/generated";
+import { getLinkedin } from "../utils/getLinkedin";
+import { getGithub } from "../utils/getGithub";
+import { getEmail } from "../utils/getEmail";
 import CopyButton from "./CopyButton";
 
 export default function IconLinks({ size = 25 }) {
-  const contactObj = allContacts[0];
   const socialLinks = [
     {
       key: "linkedin",
-      link: `https://${contactObj.linkedin}`,
+      link: getLinkedin(),
       icon: <LinkedinIcon width={size} height={size} />,
     },
     {
       key: "github",
-      link: `https:${contactObj.github}`,
+      link: getGithub(),
       icon: <GithubIcon width={size} height={size} />,
     },
   ];
@@ -26,8 +27,7 @@ export default function IconLinks({ size = 25 }) {
 
   return (
     <div className="inline-flex gap-4">
-      <CopyButton
-        textToCopy={`${contactObj.emailHandle}@${contactObj.emailDomain}`}>
+      <CopyButton textToCopy={getEmail()}>
         <MailIcon width={size + 3} height={size + 3} className={iconStyles} />
       </CopyButton>
       {socialLinks.map((linkObj) => (

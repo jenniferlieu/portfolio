@@ -9,7 +9,7 @@ export default function CopyButton({ children, textToCopy, type }) {
     try {
       await navigator.clipboard.writeText(textToCopy);
       setCopied(true);
-      setTimeout(() => setCopied(false), 3000);
+      setTimeout(() => setCopied(false), 1300);
     } catch (err) {
       console.error("failed to copy");
     }

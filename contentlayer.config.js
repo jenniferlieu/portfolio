@@ -74,6 +74,7 @@ const Contact = defineDocumentType(() => ({
   contentType: "data",
   fields: {
     emailHandle: { type: "string", required: true },
+    emailProvider: { type: "string", required: true },
     emailDomain: { type: "string", required: true },
     github: { type: "string", required: true },
     linkedin: { type: "string", required: true },
