@@ -27,7 +27,7 @@ export default function Contact() {
               <ExternalLink
                 href={getLinkedin()}
                 size={20}
-                className="font-bold underline text-xl text-text hover:text-primary">
+                className="font-bold underline text-xl text-text">
                 {getLinkedinText()}
               </ExternalLink>
             </div>
