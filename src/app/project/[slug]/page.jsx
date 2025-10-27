@@ -89,7 +89,7 @@ export default async function ProjectPage({ params }) {
           <div className="text-text text-xl">{project.description}</div>
 
           {/* Stats */}
-          <div className="space-y-8 lg:space-y-0">
+          <div className="space-y-8 lg:space-y-4">
             {/* Stats: Row 1 */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {project.stats.map((stat, index) => (
@@ -123,7 +123,7 @@ export default async function ProjectPage({ params }) {
 
         {/* Summary */}
         <section className="prose dark:prose-invert max-w-none border-t border-b border-border py-8">
-          <h2>Summary & impact</h2>
+          <h2>Summary & Impact</h2>
           <MDXSummary />
         </section>
 
