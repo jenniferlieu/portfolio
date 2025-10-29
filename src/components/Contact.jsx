@@ -2,6 +2,7 @@ import Section from "./layout/Section";
 import ExternalLink from "./ExternalLink";
 import { getLinkedin, getLinkedinText } from "../utils/getLinkedin";
 import EmailLink from "./EmailLink";
+import ContactBlock from "./ContactBlock";
 
 export default function Contact() {
   return (
@@ -9,29 +10,20 @@ export default function Contact() {
       <div className="flex flex-col items-center">
         <div className="inline-block space-y-12 pt-5">
           {/* email */}
-          <div className="flex flex-col sm:flex-row sm:items-start">
-            <div className="w-full text-left text-xl font-medium mb-2 sm:text-right sm:w-50 sm:mb-0">
-              Send me a message:
-            </div>
-            <div className="w-full sm:w-auto sm:pl-4">
-              <EmailLink />
-            </div>
-          </div>
+          <ContactBlock label="Send me a message" value={<EmailLink />} />
 
           {/* linkedin */}
-          <div className="flex flex-col sm:flex-row sm:items-start">
-            <div className="w-full text-left text-xl font-medium mb-2 sm:text-right sm:w-50 sm:mb-0">
-              Connect with me:
-            </div>
-            <div className="w-full sm:w-auto sm:pl-4">
+          <ContactBlock
+            label="Connect with me"
+            value={
               <ExternalLink
                 href={getLinkedin()}
                 size={20}
                 className="font-bold underline text-xl text-text">
                 {getLinkedinText()}
               </ExternalLink>
-            </div>
-          </div>
+            }
+          />
         </div>
       </div>
     </Section>

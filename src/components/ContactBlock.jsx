@@ -1,30 +1,18 @@
 import PropTypes from "prop-types";
 
-import ExternalLink from "./ExternalLink";
-
-export default function ContactBlock({
-  children,
-  label,
-  href,
-  linkLabel,
-  size,
-  className,
-}) {
+export default function ContactBlock({ label, value }) {
   return (
-    <div className="flex gap-4 items-start">
-      <span className="w-full">{label}:</span>
-      <ExternalLink href={href} size={size} className={className}>
-        {linkLabel}
-      </ExternalLink>
-      {children}
+    <div className="flex flex-col sm:flex-row sm:items-start">
+      <div className="w-full text-left text-xl font-medium mb-2 sm:text-right sm:w-50 sm:mb-0">
+        {label}
+        {":"}
+      </div>
+      <div className="w-full sm:w-auto sm:pl-4">{value}</div>
     </div>
   );
 }
 
 ContactBlock.propTypes = {
   label: PropTypes.string.isRequired,
-  href: PropTypes.string.isRequired,
-  linkLabel: PropTypes.string.isRequired,
-  size: PropTypes.number.isRequired,
-  className: PropTypes.string,
+  value: PropTypes.node.isRequired,
 };
