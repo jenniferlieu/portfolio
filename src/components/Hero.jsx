@@ -15,11 +15,7 @@ export default function Hero() {
           <h1 className="text-text text-4xl font-bold mb-2">
             I'm <span className="text-primary">{about.firstName}</span>, a{" "}
             <span className="text-primary">
-              {about.jobTitle[0].toLowerCase()}
-            </span>{" "}
-            &{" "}
-            <span className="text-primary">
-              {about.jobTitle[1].toLowerCase()}
+              {about.jobTitle.join(" & ").toLowerCase()}
             </span>
             .
           </h1>
