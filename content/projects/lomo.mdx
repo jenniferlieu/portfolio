@@ -22,19 +22,95 @@ stats:
     value: "Sep 2023 - Dec 2023 (4mos)"
   - label: "Links"
     value: 
-      - label: "Live Demo"
-        value: "https://lomo.gg"
       - label: "Source Code"
         value: "https://github.com/Capstone-Projects-2023-Fall/project-lomo-in-person-gaming-app"
 summary: |
-  Cat ipsum dolor sit amet, mew mew, swat at dog meow meow hide when guests come over. Roll over and sun my belly purr meow meow mama for nya nya nyan or be superior. Sleep on my human's head swat turds around the house, hunt anything carrying out surveillance on the neighbour's dog. Steal raw zucchini off kitchen counter good morning sunshine ooooh feather moving feather!. Destroy house in 5 seconds human is in bath tub, emergency! drowning! meooowww!. 
-  - cat 1
-  - cat 2
-  - cat 3
+  LOMO connects gamers who enjoy offline games like Dungeons & Dragons, Super Smash Bros, and Magic: The Gathering. LOMO aims to fill the gap left by mainstream gaming platforms, providing a dedicated space for offline gamers to connect and build communities around their favorite tabletop and local multiplayer games.
+
+  As a backend developer on a team of 7, my contributions included:
+  - Serving as backend lead
+  - Implementing core backend features, including user authentication, real-time updates with WebSockets, and integrations with Google Maps and IGDB
+  - Setting up Docker and Laravel development environment for the team
+  - Collaborating with a cross-functional team of developers to deliver a functional proof-of-concept within a 4-month timeline
+  - Setting up CI/CD pipelines for automated testing and deployment
+  - Writing comprehensive documentation for backend setup and usage
+
+  The final result was well-received and highly anticipated by our peers, demonstrating the potential of LOMO to fill a niche in the gaming community.
 ---
 
 ## What is LOMO?
-Eat plants, meow, and throw up because i ate plants hate dogs for meow to be let in or thug cat , so eat the rubberband and kitty pounce, trip, faceplant you didn't see that no you didn't definitely didn't lick, lick, lick, and preen away the embarrassment or brown cats with pink ears. Purrr purr littel cat, little cat purr purr hit you unexpectedly yowling nonstop the whole night. More napping, more napping all the napping is exhausting leave fur on owners clothes. Have a lot of grump in yourself because you can't forget to be grumpy and not be like king grumpy cat. Pushes butt to face purrrrrr run off table persian cat jump eat fish carefully drink from water glass and then spill it everywhere and proceed to lick the puddle paw your face to wake you up in the morning catasstrophe claw drapes.
+> Replace FOMO with LOMO - the fear of missing out on offline gaming experiences.
 
-## Takeaways
-Sleep on keyboard. Ooh, are those your $250 dollar sandals? lemme use that as my litter box love me! lick yarn hanging out of own butt Gate keepers of hell knock dish off table head butt cant eat out of my own dish. My water bowl is clean and freshly replenished, so i'll drink from the toilet destroy couch. Bird bird bird bird bird bird human why take bird out i could have eaten that attack feet, for cat milk copy park pee walk owner escape bored tired cage droppings sick vet vomit but asdflkjaertvlkjasntvkjn (sits on keyboard) but find box a little too small and curl up with fur hanging out , sit and stare but catch mouse and gave it as a present. Rub face on everything. Nyan fluffness ahh cucumber! nyaa nyaa oooo! dangly balls! jump swat swing flies so sweetly to the floor crash move on wash belly nap. See owner, run in terror munch, munch, chomp, chomp i love cats i am one wake up scratch humans leg for food then purr then i have a and relax or meowsiers cough hairball on conveniently placed pants scream for no reason at 4 am no, you can't close the door, i haven't decided whether or not i wanna go out. 
+LOMO is a social platform designed to connect gamers who enjoy offline games such as Dungeons & Dragons, Super Smash Bros, and Magic: The Gathering. The platform allows users to create profiles, join gaming groups, and organize in-person gaming sessions with like-minded individuals in their local area.
+
+## Why LOMO?
+The current mainstream gaming platforms primarily focus on online multiplayer experiences, leaving a gap for those who prefer face-to-face interactions. LOMO aims to fill this gap by providing a dedicated space for offline gamers to connect, share their passion, and build communities around their favorite tabletop and local multiplayer games.
+
+## Goals
+Our goal was to create a prototype of an engaging and user-friendly platform that fostered a sense of community among offline gamers, encouraging them to step away from their screens and enjoy the social aspects of gaming in person. 
+
+Inspired by Pokemon GO, we decided to base the functionalities of the app on a 2D map. The envisioned platform offers features such as:
+- **Location Services**: Google Maps integration helps users find open groups and connect with local gamers.
+- **Group Creation and Management**: Users can create, share, and join gaming groups, called "Beacons".
+- **Real-Time Updates**: Users receive updates about upcoming sessions, group activities, and new member requests live as they happen without refreshing the app.
+- **User Profiles**: Gamers can create detailed profiles showcasing their favorite games, play styles, and availability.
+
+To achieve this goal, we decided to use React for the frontend, Laravel for the baceknd, and MongoDB for the database. We eventually swiched over to PostgreSQL due to support for geospatial queries and structured relational data.
+
+## Process
+Our team began by storyboarding ideas with sticky notes to visualize the user flow, then defined high-level requirements through a detailed project proposal and abstract. Despite our sprint-based approach, our workflow often leaned toward a waterfall approach. We held weekly standups and sprint reviews to showcase live demos of new or updated features. We used Jira to for project management, GitHub for version control, Discord for team communication, and Docusaurus for documentation.
+
+## Challenges
+### Challenge: Setting up Docker and Laravel Environment Across Team Members
+Our team struggled setting up the backend development, stalling our progress for over a week. Most of us, including myself, had never worked with Docker and Laravel.
+
+**Action:** I took on the initiative to research, learn, and setup a stable, working backend environment on my machine. I then wrote a short setup guide for the team, detailing the steps to recreate the environment on their machines along with starter guides on how to use both Docker and Laravel to help the team get up to speed quickly. I also personally walked through the setup process for each member until everyone was able to get the environment running on their machines.
+
+**Outcome:** After several hours of troubleshooting and collaboration, we were able to set up the backend environments on everyone's machines, along with an updated, reproducible setup guide with common troubleshooting fixes and solutions that we encountered. This experience not only helped us overcome the initial hurdle but also fostered a sense of teamwork and collaboration within the group.
+
+### Challenge: Limitations with MongoDB for Geospatial Queries and Relational Data
+We initially chose MongoDB as our database due to its flexibility. However, as we began implementing location-based features and relational data structures, we encountered limitations with MongoDB's geospatial query capabilities and handling complex relationships between entities.
+
+**Action:** I began to suspect that our database choice might not be the best fit for our needs when I realized our data might be more structured and relational than we initially thought. We figured we could make do by implementing those capabilities in Laravel before hitting the backend. However, when it came to geospatial data, this proved to be more time-consuming than switching over to PostgreSQL. After some basic testing with PostgreSQL on my local machine, I proposed switching to PostgreSQL, which offered advanced geospatial capabilities through the PostGIS extension and better support for relational data.
+
+**Outcome:** After discussing my findings with the team, we decided to switch to PostgreSQL. The transition required some effort, but ultimately, it allowed us to implement the location-based features more effectively and handle our relational data more easily.
+
+### Challenge: Implementing Live Game Search with IGDB API
+We wanted to implement a live search feature using IGDB's API to allow users to quickly find games by name and to retrieve and populate game data. However, IGDB's built-in search functionalities were limited and did not provide the level of search relevancy we desired.
+
+**Action:** I researched and experimented with IGDB's API regular search and fuzzy search to increase the search relevancy. The results were still not as we had imagined and were actually worse than the regular search.
+
+**Outcome:** I discussed my findings with the team, and we decided that this was beyond our capabilities within the time constraints and the scope of the project. We opted to implement IGDB's regular search functionality, which still provided a decent user experience.
+
+### Challenge: Learning to Collaborate and Delegate Backend Tasks
+As a team of mostly inexperienced backend developers, we struggled with direction and our own capabilities. As the first person who had set up the backend environment, I unintentionally became the default leader of the backend team. I had difficulty delegating appropriate tasks to team members, often leaving them idle as most of the backend work consisted of research and writing modified boilerplate code. It didn't help that I also took on a significant portion of the backend work myself. This led to burnout on my part and frustration among team members who felt underutilized.
+
+**Action:** I tried various methods to improve my project management skills. I tried breaking down larger tasks into smaller ones, but that made people more idle as they finished quickly and with little code contribution. I tried delegating overarching features to individuals like user profiles and websockets, but that led to bottlenecks as people struggled to complete the larger features on their own. I checked in on my teammates individually to try and gauge the effectiveness of my methods. Finally, I settled on pairing team members together for specific features, while I focused on handling DevOps and guiding the team to the solution instead of building it myself.
+
+**Outcome:** The project timeline was only 4 months, so we were unable to fully recover from the initial mismanagement. However, by delegating features instead of tasks, team members became more engaged and motivated. 
+
+## Results
+The project was well-received and highly anticipated by our peers, demonstrating the potential of LOMO to fill a niche in the gaming community.
+
+We developed a functional prototype of LOMO showcasing the core features of the platform:
+- User authentication
+- Beacon creation and interaction with comments
+- Real-time updates using WebSockets
+- Location services with Google Maps integration
+- Live game search using IGDB API
+
+There were still many features we were unable to implement within the time constraints, such as:
+- User profiles
+- Search and filtering for Beacons
+- Beacon management - joining, leaving, and invitations
+
+And many improvements to be made, such as:
+- Enhancing the frontend user experience and design
+- Optimizing backend performance and scalability
+- Optimizing search relevance with IGDB
+
+## Lessons Learned
+- The importance of clear documentation and setup guides when working with new technologies as a team.
+- The importance of choosing the right tech stack based on project requirements.
+- Communicating technical constraints, challenges, and trade-offs in a way that helps others see the reasoning behind decisions.
+- Good collaboration is about giving team members ownership of the project.
