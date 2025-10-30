@@ -12,11 +12,12 @@ Open [http://localhost:3000](http://localhost:3000).
 - [x] Programmatically inject email string
 - [x] Research where env variable shows up in the nextjs / react lifecycle and if it can be leaked, etc.
 - [x] Remove skills section
-- [ ] Setup live links for each project
+- [x] Setup live links for each project
 - [x] Write up case studies for each project
 - [ ] Upload resume
-- [ ] Fix job title array for single and multiple titles
-- [ ] Create contact block
+- [x] Fix job title array for single and multiple titles
+- [x] Create contact block
+- [ ] Fork project repos and make them buildable
 
 ## Extras
 - [ ] Terminal box hover: light shadow moves with mouse
