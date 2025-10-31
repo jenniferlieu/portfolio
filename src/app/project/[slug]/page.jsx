@@ -128,7 +128,7 @@ export default async function ProjectPage({ params }) {
         </section>
 
         {/* Main Content */}
-        <section className="prose dark:prose-invert max-w-none">
+        <section className="prose prose-invert max-w-none">
           <MDXContent />
         </section>
 
