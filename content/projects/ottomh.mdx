@@ -1,0 +1,78 @@
+---
+title: "OTTOMH"
+slug: "ottomh"
+image: "/images/ottomh-banner.png"
+headline: "Challenging Party-Goers With Timed Trivia Battles"
+description: "Web-based trivia game challenging players to think as fast as they can to win first place"
+impact: "Integrated WebSockets with state management to support real-time gameplay for 30+ concurrent users"
+skills:
+  - React
+  - Bootstrap
+  - State Management
+  - WebSockets
+stats:
+  - label: "Role"
+    value: "Frontend Developer"
+  - label: "Team"
+    value: "4 Developers"
+  - label: "Timeline"
+    value: "Oct 2022 (1mo)"
+  - label: "Links"
+    value: 
+      - label: "Source Code"
+        value: "https://github.com/jenniferlieu/ottomh"
+summary: |
+  OTTOMH (On The Top Of My Head) is a web-based party trivia game that allows players to compete in real-time by submitting words based on a given letter and category, similar to Scattegories. The game supports geographically distributed players and was designed to be mobile-first and responsive.
+  
+  As a frontend developer on a team of 4, my contributions included:
+  - Implementing real-time gameplay functionality using WebSockets and state management with Zustand
+  - Building the game lobby and core frontend structure using React and React Router
+  - Collaborating with backend developers to ensure seamless integration of frontend and backend components
+---
+
+## What is OTTOMH?
+OTTOMH (On The Top Of My Head) is a web-based party trivia game that challenges players to come up with as many words that start with a certain letter and belong to a certain category in a set amount of time while competing against other players.
+
+Unlike physical board games, OTTOMH is easier to set up and can be played by geographically distributed players. It also provides a user-friendly, web-based experience similar to the popular board game Scattergories, allowing players to exercise their brains while having a good time.
+
+## Goal
+Inspired by Scattergories and Jackbox Party Games, our goal was to create a web-based, mobile-first trivia game capable of supporting real-time gameplay for every single person in our class, which was at least 30 people. To achieve this, we decided to use React for the frontend, Go with WebSockets for the backend, and JSON for data storage.
+
+The envisioned platform offers features such as:
+- **Real-Time Gameplay**: Players can join trivia games and compete against each other in real-time, with live updates on scores and rankings.
+- **Timed Rounds**: Each round is timed, adding an element of urgency to the gameplay
+- **Invite Friends**: Players can invite friends to join their games with unique game codes
+- **Multiplayer Support**: The game can accommodate multiple players, allowing friends and family to join in on the fun from anywhere
+- **Score Tracking**: Players' scores are tracked throughout the game with a leaderboard displaying the top performers
+- **Responsive Design**: The game is designed to be mobile-friendly, ensuring a seamless experience across different devices
+
+## Process
+Our team began by storyboarding the user flow, braindstorming features and designing the UI/UX. We divided the team into frontend and backend subteams, with two developers on each side. We followed a sprint-based development approach, holding daily standups and weekly sprint planning meetings. We used GitHub project boards for project management, Github for version control, and Discord for communications. 
+
+## Challenges
+
+### Challenge: Real-Time State Synchronization
+I was assigned the task of implementing real-time gameplay functionality on the frontend, using the WebSocket connections provided by the backend team. The challenge was to ensure that all players' game states were synchronized in real-time, including score updates, word submissions, and voting results.
+
+**Action:** I implemented state management using Zustand and the WebSocket connections to synchronize the game state across all connected clients. I also implemented React Router to manage different game views, setting up the logical mechanism for switching between views.
+
+**Outcome:** The real-time gameplay functioned smoothly. Our team was able to build on top of this foundation to implement the rest of the game features and views.
+
+### Challenge: Rapidly Learning React
+As a team member with limited experience in React, I faced the challenge of quickly learning the framework and beginning contributing effectively to the frontend development.
+
+**Action:** I focused on learning React fundamentals through online tutorials and videos. I then applied this knowledge to build the game lobby "view" and eventually the backbone of the frontend.
+
+**Outcome:** All assigned tasks were implemented with a clean UI and functional interactions. I also gained valuable experience in the basics of React and improved my ability to learn new technologies quickly.
+
+## Results
+We delivered and deployed OTTOMH within a month, and we were able to achieve all of our initial goals. To test our proof-of-concept, we invited our entire class to play a live game session. The game successfully supported over 30 concurrent users, with real-time updates functioning as intended.
+
+## Lessons Learned
+- Implementing state synchronization with WebSockets in a multiplayer environment
+- Working within a cross-functional team to match frontend and backend requirements
+- Rapid learning and application of new technologies like React
+
+## Demo
+Live demo is not available due to hosting costs. Instead, here are screenshots of the working protoype to show the user flow. The game can also be played and run locally on your machine. Just go to the source code repo, follow the setup instructions, and play start playing!
+<img src="/images/ottomh-demo.png" alt="All screenshots of OTTOMH pages as a demo" width={1500} height={643} />

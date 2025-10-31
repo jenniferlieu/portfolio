@@ -1,57 +1,58 @@
+import Image from "next/image";
+
 import PropTypes from "prop-types";
 import ArrowRightIcon from "../assets/ArrowRightIcon.svg";
+import BadgeList from "./BadgeList";
+import ButtonPrimary from "./ButtonPrimary";
 
-export const ProjectCard = ({
-  category,
+export default function ProjectCard({
   title,
-  description,
-  details,
-  technologies,
+  slug,
   image,
-}) => {
+  headline,
+  description,
+  impact,
+  skills,
+}) {
   return (
-    <div className="border border-gray-200 rounded-lg p-6 relative">
-      <div className="flex flex-col md:flex-row gap-6">
-        <div className="md:w-2/3">
-          <span className="text-orange-500 font-medium text-sm">
-            {category}
-          </span>
-          <h3 className="font-bold text-xl mt-1 mb-3">{title}</h3>
-          <p className="text-gray-600 mb-4">{description}</p>
-          <p className="text-gray-600 mb-6">{details}</p>
-          <div className="flex flex-wrap gap-2 mb-6">
-            {technologies.map((tech, index) => (
-              <span
-                key={index}
-                className="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full">
-                {tech}
-              </span>
-            ))}
-          </div>
-          <a
-            href="#"
-            className="inline-flex items-center text-sm font-medium hover:underline">
-            View Case Study{" "}
-            <ArrowRightIcon width={20} height={20} className="ml-1" />
-          </a>
-        </div>
-        <div className="md:w-1/3 bg-gray-100 rounded-lg min-h-[200px]">
-          <img
-            src={image}
+    <div className="p-6 lg:p-0 border border-border lg:border-none rounded-lg shadow-card lg:shadow-none!">
+      <div className="flex flex-col lg:flex-row gap-6">
+        <div className="relative lg:w-1/2 rounded-lg md:max-h-[400px] h-[200px] md:h-[400px] w-full flex items-center lg:shadow-card">
+          <Image
+            src={image || "https://placehold.co/600x400/7d7d7d/7d7d7d.png"}
             alt={title}
-            className="w-full h-full object-cover rounded-lg opacity-0"
+            fill
+            className="object-cover w-full h-auto rounded-lg shadow-card lg:border lg:border-border"
           />
+        </div>
+        <div className="lg:w-1/2 space-y-6">
+          <span className="text-primary text-sm font-medium">
+            {title.toUpperCase()}
+          </span>
+          <h2 className="text-text font-bold text-2xl mt-1 mb-3">{headline}</h2>
+          <p>{description}</p>
+          <p>{impact}</p>
+          {<BadgeList list={skills} />}
+          <ButtonPrimary href={`/project/${slug}`}>
+            View Case Study
+            <ArrowRightIcon
+              width={16}
+              height={16}
+              className="transition-transform duration-300 group-hover:translate-x-1"
+            />
+          </ButtonPrimary>
         </div>
       </div>
     </div>
   );
-};
+}
 
 ProjectCard.propTypes = {
-  category: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-  details: PropTypes.string.isRequired,
-  technologies: PropTypes.arrayOf(PropTypes.string).isRequired,
+  slug: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
+  headline: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  impact: PropTypes.string.isRequired,
+  skills: PropTypes.arrayOf(PropTypes.string).isRequired,
 };

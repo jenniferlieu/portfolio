@@ -1,26 +1,31 @@
-export const Contact = () => {
+import Section from "./layout/Section";
+import ExternalLink from "./ExternalLink";
+import { getLinkedin, getLinkedinText } from "../utils/getLinkedin";
+import EmailLink from "./EmailLink";
+import ContactBlock from "./ContactBlock";
+
+export default function Contact() {
   return (
-    <section className="py-12 border-b border-gray-200">
-      <h2 className="text-center text-2xl font-bold mb-10">Let's Connect</h2>
-      <div className="flex flex-col items-center text-center">
-        <div className="mb-4">
-          <span className="block mb-1">Send me a message:</span>
-          <a
-            href="mailto:example@example.com"
-            className="text-gray-800 font-medium hover:underline inline-flex items-center">
-            example@example.com <span className="ml-1">→</span>
-          </a>
-          <span className="block text-sm text-gray-500 mt-1">[Copy email]</span>
-        </div>
-        <div className="mt-4">
-          <span className="block mb-1">Connect with me:</span>
-          <a
-            href="https://linkedin.com/in/username"
-            className="text-gray-800 font-medium hover:underline inline-flex items-center">
-            linkedin.com/in/username <span className="ml-1">→</span>
-          </a>
+    <Section id="contact" title="Contact">
+      <div className="flex flex-col items-center">
+        <div className="inline-block space-y-12 pt-5">
+          {/* email */}
+          <ContactBlock label="Send me a message" value={<EmailLink />} />
+
+          {/* linkedin */}
+          <ContactBlock
+            label="Connect with me"
+            value={
+              <ExternalLink
+                href={getLinkedin()}
+                size={20}
+                className="font-bold underline text-xl text-text">
+                {getLinkedinText()}
+              </ExternalLink>
+            }
+          />
         </div>
       </div>
-    </section>
+    </Section>
   );
-};
+}

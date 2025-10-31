@@ -1,5 +1,17 @@
+import { withContentlayer } from "next-contentlayer2";
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "placehold.co",
+        port: "",
+        pathname: "/**",
+      },
+    ],
+  },
   webpack(config) {
     // Grab the existing rule that handles SVG imports
     const fileLoaderRule = config.module.rules.find((rule) =>
@@ -27,6 +39,7 @@ const nextConfig = {
 
     return config;
   },
+  reactStrictMode: true,
 };
 
-export default nextConfig;
+export default withContentlayer(nextConfig);
