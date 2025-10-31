@@ -122,7 +122,7 @@ export default async function ProjectPage({ params }) {
         </header>
 
         {/* Summary */}
-        <section className="prose dark:prose-invert max-w-none border-t border-b border-border py-8">
+        <section className="prose prose-invert max-w-none border-t border-b border-border py-8">
           <h2>Summary & Impact</h2>
           <MDXSummary />
         </section>
