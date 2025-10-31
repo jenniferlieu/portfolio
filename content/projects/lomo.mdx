@@ -23,19 +23,16 @@ stats:
   - label: "Links"
     value: 
       - label: "Source Code"
-        value: "https://github.com/Capstone-Projects-2023-Fall/project-lomo-in-person-gaming-app"
+        value: "https://github.com/jenniferlieu/project-lomo-in-person-gaming-app"
 summary: |
   LOMO connects gamers who enjoy offline games like Dungeons & Dragons, Super Smash Bros, and Magic: The Gathering. LOMO aims to fill the gap left by mainstream gaming platforms, providing a dedicated space for offline gamers to connect and build communities around their favorite tabletop and local multiplayer games.
 
   As a backend developer on a team of 7, my contributions included:
-  - Serving as backend lead
   - Implementing core backend features, including user authentication, real-time updates with WebSockets, and integrations with Google Maps and IGDB
-  - Setting up Docker and Laravel development environment for the team
-  - Collaborating with a cross-functional team of developers to deliver a functional proof-of-concept within a 4-month timeline
   - Setting up CI/CD pipelines for automated testing and deployment
+  - Collaborating with the frontend team to establish API integration and real-time updates through WebSockets 
+  - Setting up the backend Laravel Docker environment for the team
   - Writing comprehensive documentation for backend setup and usage
-
-  The final result was well-received and highly anticipated by our peers, demonstrating the potential of LOMO to fill a niche in the gaming community.
 ---
 
 ## What is LOMO?
@@ -43,7 +40,6 @@ summary: |
 
 LOMO is a social platform designed to connect gamers who enjoy offline games such as Dungeons & Dragons, Super Smash Bros, and Magic: The Gathering. The platform allows users to create profiles, join gaming groups, and organize in-person gaming sessions with like-minded individuals in their local area.
 
-## Why LOMO?
 The current mainstream gaming platforms primarily focus on online multiplayer experiences, leaving a gap for those who prefer face-to-face interactions. LOMO aims to fill this gap by providing a dedicated space for offline gamers to connect, share their passion, and build communities around their favorite tabletop and local multiplayer games.
 
 ## Goals
@@ -62,7 +58,7 @@ Our team began by storyboarding ideas with sticky notes to visualize the user fl
 
 ## Challenges
 ### Challenge: Setting up Docker and Laravel Environment Across Team Members
-Our team struggled setting up the backend development, stalling our progress for over a week. Most of us, including myself, had never worked with Docker and Laravel.
+Our team struggled setting up the backend development, stalling our progress for over a week. Most of the team was new to Laravel and Docker, so I took the initiative to setup the backend and onboarding my teammates.
 
 **Action:** I took on the initiative to research, learn, and setup a stable, working backend environment on my machine. I then wrote a short setup guide for the team, detailing the steps to recreate the environment on their machines along with starter guides on how to use both Docker and Laravel to help the team get up to speed quickly. I also personally walked through the setup process for each member until everyone was able to get the environment running on their machines.
 
@@ -71,7 +67,7 @@ Our team struggled setting up the backend development, stalling our progress for
 ### Challenge: Limitations with MongoDB for Geospatial Queries and Relational Data
 We initially chose MongoDB as our database due to its flexibility. However, as we began implementing location-based features and relational data structures, we encountered limitations with MongoDB's geospatial query capabilities and handling complex relationships between entities.
 
-**Action:** I began to suspect that our database choice might not be the best fit for our needs when I realized our data might be more structured and relational than we initially thought. We figured we could make do by implementing those capabilities in Laravel before hitting the backend. However, when it came to geospatial data, this proved to be more time-consuming than switching over to PostgreSQL. After some basic testing with PostgreSQL on my local machine, I proposed switching to PostgreSQL, which offered advanced geospatial capabilities through the PostGIS extension and better support for relational data.
+**Action:** I began to suspect that our database choice might not be the best fit for our needs when I realized our data might be more structured and relational than we initially thought. It really started to show its limitations when we began implementing geospatial data. After prototyping with PostgreSQL locally, I confirmed the ease of use and support for geospatial data and proposed switching to PostgreSQL.
 
 **Outcome:** After discussing my findings with the team, we decided to switch to PostgreSQL. The transition required some effort, but ultimately, it allowed us to implement the location-based features more effectively and handle our relational data more easily.
 
@@ -90,31 +86,14 @@ As a team of mostly inexperienced backend developers, we struggled with directio
 **Outcome:** The project timeline was only 4 months, so we were unable to fully recover from the initial mismanagement. However, by delegating features instead of tasks, team members became more engaged and motivated. 
 
 ## Results
-The project was well-received and highly anticipated by our peers, demonstrating the potential of LOMO to fill a niche in the gaming community.
-
-We developed a functional prototype of LOMO showcasing the core features of the platform:
-- User authentication
-- Beacon creation and interaction with comments
-- Real-time updates using WebSockets
-- Location services with Google Maps integration
-- Live game search using IGDB API
-
-There were still many features we were unable to implement within the time constraints, such as:
-- User profiles
-- Search and filtering for Beacons
-- Beacon management - joining, leaving, and invitations
-
-And many improvements to be made, such as:
-- Enhancing the frontend user experience and design
-- Optimizing backend performance and scalability
-- Optimizing search relevance with IGDB
+We delivered a functional prototype within 4 months, demonstrating the creation and real time updates of groups (called Beacons) with commenting. Due to time constraints, we were unable to really flesh our "User Profile" goal. The project presentation received strong engagement from our peers and mentor, validating the concept's potential to serve an underserved gaming niche.
 
 ## Lessons Learned
-- The importance of clear documentation and setup guides when working with new technologies as a team.
+- The importance of clear documentation and coding conventions when working with new technologies as a team.
 - The importance of choosing the right tech stack based on project requirements.
 - Communicating technical constraints, challenges, and trade-offs in a way that helps others see the reasoning behind decisions.
 - Good collaboration is about giving team members ownership of the project.
 
 ## Demo
-Live demo is not available due to hosting costs. Instead, here are screenshots of the working prototype to show the key features and user flow. 
+Live demo is not available due to hosting costs. Instead, here are screenshots of the working prototype to show the key features and user flow. The app can also be built and run on local machines. Check out the source code for the setup instructions.
 <img src="/images/lomo-demo.png" alt="Screenshots of LOMO as demo" />
