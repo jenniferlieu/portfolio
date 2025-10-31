@@ -17,7 +17,8 @@ Open [http://localhost:3000](http://localhost:3000).
 - [ ] Upload resume
 - [x] Fix job title array for single and multiple titles
 - [x] Create contact block
-- [ ] Fork project repos and make them buildable
+- [x] Fork project repos and make them buildable
+- [ ] Deploy
 
 ## Extras
 - [ ] Terminal box hover: light shadow moves with mouse
