@@ -58,12 +58,10 @@ export default async function ProjectPage({ params }) {
   return (
     <main className="max-w-page-width mx-auto py-page-padding-y px-page-padding-x lg:px-page-padding-x-lg space-y-8">
       {/* Back to Home button */}
-      <Link
-        href="/"
-        className="inline-flex items-center gap-2 group hover:text-primary">
+      <Link href="/" className="inline-flex items-center gap-2 group">
         <ArrowleftIcon
           size={20}
-          className="transition-transform duration-300 group-hover:-translate-x-1"
+          className="transition-transform duration-300 ease-out group-hover:-translate-x-1 group-focus:-translate-x-1 group-active:-translate-x-1"
         />
         <span className="font-semibold">Home</span>
       </Link>
@@ -72,7 +70,7 @@ export default async function ProjectPage({ params }) {
         {/* Header */}
         <header className="space-y-10">
           {/* Project Image */}
-          <div className="relative h-[54vh] rounded-lg w-full shadow-card border border-border">
+          <div className="relative h-[200px] md:h-[360px] rounded-lg w-full shadow-card">
             <Image
               src={project.image}
               alt={`Banner image of ${project.title} project`}
@@ -103,8 +101,7 @@ export default async function ProjectPage({ params }) {
                         <ExternalLink
                           key={index}
                           href={link.value}
-                          size={16}
-                          className="underline">
+                          className="font-normal">
                           {link.label}
                         </ExternalLink>
                       ))}
