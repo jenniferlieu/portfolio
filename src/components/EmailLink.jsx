@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import { getEmail } from "../utils/getEmail";
+import { getEmailLink } from "../utils/getEmailLink";
 import CopyButton from "./CopyButton";
 import CopyIcon from "../assets/CopyIcon.svg";
 
@@ -31,10 +31,10 @@ export default function EmailLink() {
   return (
     <div ref={emailRef}>
       {showEmail ? (
-        <CopyButton textToCopy={getEmail()}>
+        <CopyButton textToCopy={getEmailLink()}>
           <div className="inline-flex gap-2 items-center group text-text">
             <span className="block font-bold text-xl group-hover:text-primary">
-              {getEmail()}
+              {getEmailLink()}
             </span>
             <CopyIcon
               width={18}

@@ -104,6 +104,11 @@ export const metadata = {
   },
 };
 
+// Notch color on mobile phones should match background color
+export const viewport = {
+  themeColor: "#1a1a1aff",
+};
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className="scroll-smooth">

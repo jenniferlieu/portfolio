@@ -3,6 +3,7 @@
 
 
 :root {
+  /* Change themeColor in app/layout.jsx to match the background */
   --bg: hsl(0, 0%, 10%);
   
   --text: hsl(0, 0%, 95%);
@@ -76,5 +77,5 @@ h1 {
 
 /* Applies to Link Component as well */
 a {
-  @apply hover:text-primary;
+  @apply hover:text-primary focus:text-primary active:text-primary;
 }

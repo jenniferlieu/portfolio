@@ -6,7 +6,7 @@ export default function BadgeList({ list }) {
       {list.map((item) => (
         <span
           key={item}
-          className="px-3 py-1 bg-border-muted hover:bg-secondary/30 text-xs font-mono rounded-full">
+          className="px-3 py-1 bg-border-muted hover:bg-secondary/30 focus:bg-secondary/30 active:bg-secondary/30 text-xs font-mono rounded-full">
           {item}
         </span>
       ))}

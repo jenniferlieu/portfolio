@@ -3,45 +3,50 @@ import GithubIcon from "../assets/GithubIcon.svg";
 import LinkedinIcon from "../assets/LinkedinIcon.svg";
 import FileTextIcon from "../assets/FileTextIcon.svg";
 import PropTypes from "prop-types";
-import Link from "next/link";
-import { getLinkedin } from "../utils/getLinkedin";
-import { getGithub } from "../utils/getGithub";
-import { getEmail } from "../utils/getEmail";
+import { getLinkedinLink } from "../utils/getLinkedinLink";
+import { getGithubLink } from "../utils/getGithubLink";
+import { getEmailLink } from "../utils/getEmailLink";
+import { getResumeLink } from "../utils/getResumeLink";
 import CopyButton from "./CopyButton";
+import ExternalLink from "./ExternalLink";
 
 export default function IconLinks({ size = 25 }) {
   const socialLinks = [
     {
-      key: "linkedin",
-      link: getLinkedin(),
-      icon: <LinkedinIcon width={size} height={size} />,
+      key: "github",
+      link: getGithubLink(),
+      icon: <GithubIcon width={size} height={size} />,
     },
     {
-      key: "github",
-      link: getGithub(),
-      icon: <GithubIcon width={size} height={size} />,
+      key: "linkedin",
+      link: getLinkedinLink(),
+      icon: <LinkedinIcon width={size - 1} height={size - 1} />,
+    },
+    {
+      key: "resume",
+      link: getResumeLink(),
+      icon: <FileTextIcon width={size} height={size} />,
     },
   ];
 
-  const iconStyles = "text-border hover:text-primary";
+  const iconStyles =
+    "text-border hover:text-primary focus:text-primary active:text-primary w-10 h-10 inline-flex items-center justify-center";
 
   return (
-    <div className="inline-flex gap-4">
-      <CopyButton textToCopy={getEmail()}>
-        <MailIcon width={size + 3} height={size + 3} className={iconStyles} />
-      </CopyButton>
+    <div className="flex">
       {socialLinks.map((linkObj) => (
-        <a
+        <ExternalLink
           key={linkObj.key}
           href={linkObj.link}
-          target="_blank"
+          variant="functional"
           className={iconStyles}>
           {linkObj.icon}
-        </a>
+        </ExternalLink>
       ))}
-      <Link href="/resume.pdf" target="_blank" className={iconStyles}>
-        <FileTextIcon width={size} height={size} />
-      </Link>
+
+      <CopyButton textToCopy={getEmailLink()} className={iconStyles}>
+        <MailIcon width={size + 4} height={size + 4} />
+      </CopyButton>
     </div>
   );
 }
