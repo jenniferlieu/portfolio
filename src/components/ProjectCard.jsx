@@ -38,7 +38,7 @@ export default function ProjectCard({
             <ArrowRightIcon
               width={16}
               height={16}
-              className="transition-transform duration-300 group-hover:translate-x-1"
+              className="transition-transform duration-500 ease-out group-hover:translate-x-1 group-focus:translate-x-1 group-active:translate-x-1"
             />
           </ButtonPrimary>
         </div>

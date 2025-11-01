@@ -3,7 +3,7 @@ import { allContacts } from "contentlayer/generated";
 const contactObj = allContacts[0];
 const linkedinURL = `linkedin.com/in`;
 
-export function getLinkedin() {
+export function getLinkedinLink() {
   return `https://${linkedinURL}/${contactObj.linkedin}`;
 }
 

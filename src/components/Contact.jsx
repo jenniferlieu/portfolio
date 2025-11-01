@@ -1,6 +1,6 @@
 import Section from "./layout/Section";
 import ExternalLink from "./ExternalLink";
-import { getLinkedin, getLinkedinText } from "../utils/getLinkedin";
+import { getLinkedinLink, getLinkedinText } from "../utils/getLinkedinLink";
 import EmailLink from "./EmailLink";
 import ContactBlock from "./ContactBlock";
 
@@ -16,10 +16,7 @@ export default function Contact() {
           <ContactBlock
             label="Connect with me"
             value={
-              <ExternalLink
-                href={getLinkedin()}
-                size={20}
-                className="font-bold underline text-xl text-text">
+              <ExternalLink href={getLinkedinLink()} className="text-xl">
                 {getLinkedinText()}
               </ExternalLink>
             }
