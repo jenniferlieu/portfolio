@@ -2,7 +2,7 @@ import { allContacts } from "contentlayer/generated";
 
 const contactObj = allContacts[0];
 
-export function getEmail() {
+export function getEmailLink() {
   return `${contactObj.emailHandle}@${contactObj.emailProvider}.${contactObj.emailDomain}`;
 }
 

@@ -78,6 +78,7 @@ const Contact = defineDocumentType(() => ({
     emailDomain: { type: "string", required: true },
     github: { type: "string", required: true },
     linkedin: { type: "string", required: true },
+    resume: { type: "string", required: true },
   },
 }));
 
