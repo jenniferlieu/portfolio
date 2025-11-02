@@ -39,15 +39,15 @@ export default function ExternalLink({ children, href, variant, className }) {
 
   // Define and set style variants for external links
   let style = "";
-  const arrowStyle = "group flex items-center font-bold";
+  const arrowStyle = "group flex items-center font-bold ";
   switch (variant) {
     case "functional": // only has the external link attributes target and rel with no styling
       break;
     case "clean": // has arrow with no underline
-      style = arrowStyle;
+      style += arrowStyle;
       break;
     default: // has arrow with underline
-      style = `${arrowStyle} underline`;
+      style += `${arrowStyle} underline`;
   }
   if (className) {
     style += ` ${className}`;
