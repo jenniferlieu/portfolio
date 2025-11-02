@@ -13,6 +13,7 @@ const SiteInfo = defineDocumentType(() => ({
     keywords: { type: "string", required: true },
     url: { type: "string", required: true },
     author: { type: "string", required: true },
+    footer: { type: "mdx", required: true },
   },
 }));
 
