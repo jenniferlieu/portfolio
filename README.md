@@ -1,25 +1,31 @@
-# Portfolio Website v1 🚀
-My portfolio website to showcase my projects.
+# [jenlieu.com](https://jenlieu.com)
+![Vercel](https://vercelbadge.vercel.app/api/jenniferlieu/jenlieu.com)
 
-Built with Next.js, Tailwind CSS, and Contentlayer. Deployed on Vercel.
+My personal website showcasing my projects. Built with Next.js, Tailwind CSS, and Contentlayer. Hosted on Vercel.
 
-
-## Getting Started
-
+## 🛠️ Installation and Setup
 1. Clone this repo
+   ```bash
+   git clone https://github.com/jenniferlieu/jenlieu.com.git
+   ```
 2. Install dependencies
    ```bash
    npm install
    ```
-- Run dev server
-    ```bash
-    npm run dev
-    ```
-Open [http://localhost:3000](http://localhost:3000).
 
-- Build and serve
+## ⚙️ Running for Development
+1. Start the development server
+   ```bash
+   npm run dev
+   ```
+2. Go to http://localhost:3000 to view the website
+
+## 🚀 Building and Running for Production
+1. Generate static site files
    ```bash
    npm run build
+   ```
+2. Start the production server
+   ```bash
    npm run start
    ```
-
