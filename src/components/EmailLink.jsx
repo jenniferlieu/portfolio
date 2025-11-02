@@ -32,15 +32,9 @@ export default function EmailLink() {
     <div ref={emailRef}>
       {showEmail ? (
         <CopyButton textToCopy={getEmailLink()}>
-          <div className="inline-flex gap-2 items-center group text-text">
-            <span className="block font-bold text-xl group-hover:text-primary">
-              {getEmailLink()}
-            </span>
-            <CopyIcon
-              width={18}
-              height={18}
-              className="group group-hover:text-primary"
-            />
+          <div className="inline-flex gap-2 items-center text-text hover:text-primary">
+            <span className="block font-bold text-xl">{getEmailLink()}</span>
+            <CopyIcon width={18} height={18} />
           </div>
         </CopyButton>
       ) : (

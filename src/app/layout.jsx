@@ -79,7 +79,7 @@ const sfMono = localFont({
 
 const siteInfo = allSiteInfos[0];
 export const metadata = {
-  title: siteInfo.title,
+  title: `${siteInfo.title}`,
   description: siteInfo.description,
   keywords: siteInfo.keywords,
   authors: [{ name: siteInfo.author }],

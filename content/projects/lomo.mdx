@@ -13,6 +13,13 @@ skills:
   - Docker
   - CI/CD
   - Token Authentication
+  - Remote
+technologies: 
+  - React
+  - Tailwind CSS
+  - Laravel PHP
+  - Docker
+  - PostgreSQL
 stats:
   - label: "Role"
     value: "Backend Developer"
@@ -27,13 +34,13 @@ stats:
 summary: |
   LOMO connects gamers who enjoy offline games like Dungeons & Dragons, Super Smash Bros, and Magic: The Gathering. LOMO aims to fill the gap left by mainstream gaming platforms, providing a dedicated space for offline gamers to connect and build communities around their favorite tabletop and local multiplayer games.
 
-  As a backend developer on a team of 7, my contributions included:
-  - Implementing core backend features, including user authentication, real-time updates with WebSockets, and integrations with Google Maps and IGDB
-  - Collaborating with the frontend team to establish API integration and real-time updates through WebSockets 
-  - Reviewing code submissions, debugging and troubleshooting issues, and collaborating with team in project planning
-  - Setting up CI/CD pipelines for automated testing and deployment
-  - Setting up the backend Laravel Docker environment for the team
-  - Writing comprehensive documentation for backend setup and usage
+  As a **backend developer** on a team of 7, my contributions included:
+  - **Implementing core backend features, including user authentication, real-time updates with WebSockets, and integrations with Google Maps and IGDB**
+  - **Collaborating with the frontend team to establish API integration WebSocket integration**
+  - **Reviewing code submissions, debugging and troubleshooting issues, and collaborating with team in project planning**
+  - **Setting up CI/CD pipelines for automated testing and deployment**
+  - **Setting up the backend Laravel Docker environment for the team**
+  - **Writing comprehensive documentation for backend setup and usage**
 ---
 
 ## What is LOMO?
@@ -71,13 +78,6 @@ We initially chose MongoDB as our database due to its flexibility. However, as w
 **Action:** I began to suspect that our database choice might not be the best fit for our needs when I realized our data might be more structured and relational than we initially thought. It really started to show its limitations when we began implementing geospatial data. After prototyping with PostgreSQL locally, I confirmed the ease of use and support for geospatial data and proposed switching to PostgreSQL.
 
 **Outcome:** After discussing my findings with the team, we decided to switch to PostgreSQL. The transition required some effort, but ultimately, it allowed us to implement the location-based features more effectively and handle our relational data more easily.
-
-### Challenge: Implementing Live Game Search with IGDB API
-We wanted to implement a live search feature using IGDB's API to allow users to quickly find games by name and to retrieve and populate game data. However, IGDB's built-in search functionalities were limited and did not provide the level of search relevancy we desired.
-
-**Action:** I researched and experimented with IGDB's API regular search and fuzzy search to increase the search relevancy. The results were still not as we had imagined and were actually worse than the regular search.
-
-**Outcome:** I discussed my findings with the team, and we decided that this was beyond our capabilities within the time constraints and the scope of the project. We opted to implement IGDB's regular search functionality, which still provided a decent user experience.
 
 ### Challenge: Learning to Collaborate and Delegate Backend Tasks
 As a team of mostly inexperienced backend developers, we struggled with direction and our own capabilities. As the first person who had set up the backend environment, I unintentionally became the default leader of the backend team. I had difficulty delegating appropriate tasks to team members, often leaving them idle as most of the backend work consisted of research and writing modified boilerplate code. It didn't help that I also took on a significant portion of the backend work myself. This led to burnout on my part and frustration among team members who felt underutilized.
