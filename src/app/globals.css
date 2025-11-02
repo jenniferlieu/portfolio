@@ -6,8 +6,8 @@
   /* Change themeColor in app/layout.jsx to match the background */
   --bg: hsl(0, 0%, 10%);
   
-  --text: hsl(0, 0%, 95%);
-  --text-muted: hsl(218, 14%, 84%);
+  --text: hsl(0, 0%, 90%);
+  --text-muted: hsl(218, 14%, 70%);
 
   --border: hsl(32, 21%, 45%);
   --border-muted: hsl(31, 12%, 17%);
@@ -76,6 +76,6 @@ h1 {
 }
 
 /* Applies to Link Component as well */
-a {
-  @apply hover:text-primary focus:text-primary active:text-primary;
+a:not(.no-hover) {
+  @apply hover:text-primary active:text-primary;
 }
