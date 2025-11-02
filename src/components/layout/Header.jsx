@@ -1,13 +1,14 @@
 import Favicon from "../../assets/favicon.svg";
 
 import Link from "next/link";
-import { allNavLinks } from "contentlayer/generated";
+import { allNavLinks, allAbouts } from "contentlayer/generated";
 
 export default function Header() {
-  const navLinks = allNavLinks[0];
-  const internalLinks = navLinks.internalLinks;
+  const navLinks = allNavLinks[0].navLinks;
+  const nickName = allAbouts[0].nickName;
+  const lastName = allAbouts[0].lastName;
   const faviconSize = 25;
-  const headerLinkStyles = "font-semibold";
+  const headerLinkStyles = "font-semibold  active:text-primary";
 
   return (
     <header className="sticky top-0 z-50 border-b border-border/50 bg-linear-45 from-bg/20 to-bg/50 backdrop-blur-lg">
@@ -17,12 +18,14 @@ export default function Header() {
           href="/"
           className={`${headerLinkStyles} flex items-center gap-1`}>
           <Favicon alt="favicon" width={faviconSize} height={faviconSize} />
-          <span className="hidden md:inline">Jennifer Lieu</span>
+          <span className="hidden md:inline">
+            {nickName} {lastName}
+          </span>
         </Link>
 
         {/* nav links */}
         <nav className="flex items-center gap-3 lg:gap-5">
-          {internalLinks.map((link, index) => (
+          {navLinks.map((link, index) => (
             <Link key={index} href={link.url} className={headerLinkStyles}>
               {link.label}
             </Link>

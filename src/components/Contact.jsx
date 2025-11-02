@@ -3,10 +3,12 @@ import ExternalLink from "./ExternalLink";
 import { getLinkedinLink, getLinkedinText } from "../utils/getLinkedinLink";
 import EmailLink from "./EmailLink";
 import ContactBlock from "./ContactBlock";
+import { getSectionTitle } from "../utils/getSectionTitle";
 
 export default function Contact() {
+  const sectionTitle = getSectionTitle("Contact");
   return (
-    <Section id="contact" title="Contact">
+    <Section id="contact" title={sectionTitle}>
       <div className="flex flex-col items-center">
         <div className="inline-block space-y-12 pt-5">
           {/* email */}
@@ -16,7 +18,9 @@ export default function Contact() {
           <ContactBlock
             label="Connect with me"
             value={
-              <ExternalLink href={getLinkedinLink()} className="text-xl">
+              <ExternalLink
+                href={getLinkedinLink()}
+                className="text-xl text-text">
                 {getLinkedinText()}
               </ExternalLink>
             }

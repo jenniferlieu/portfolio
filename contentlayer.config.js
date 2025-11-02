@@ -21,8 +21,8 @@ const NavLinks = defineDocumentType(() => ({
   filePathPattern: `nav-links.yaml`,
   contentType: "data",
   fields: {
-    internalLinks: { type: "list", of: { type: "json" }, required: true },
-    externalLinks: { type: "list", of: { type: "json" }, required: false },
+    navLinks: { type: "list", of: { type: "json" }, required: true },
+    sectionLinks: { type: "list", of: { type: "json" }, required: false },
   },
 }));
 
@@ -32,9 +32,10 @@ const About = defineDocumentType(() => ({
   contentType: "mdx",
   fields: {
     firstName: { type: "string", required: true },
+    nickName: { type: "string", required: true },
     lastName: { type: "string", required: true },
     jobTitle: { type: "list", of: { type: "string" }, required: true },
-    blurb: { type: "string", required: true },
+    blurb: { type: "mdx", required: false },
     facts: { type: "json", required: true },
   },
 }));
