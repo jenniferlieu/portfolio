@@ -102,8 +102,8 @@ export default async function ProjectPage({ params }) {
             </div>
             {/* Stats: Row 2 */}
             <div>
-              <p className="font-bold text-primary">Skills</p>
-              <p>{project.skills.join(", ")}</p>
+              <p className="font-bold text-primary">Tech Stack</p>
+              <p>{project.technologies.join(", ")}</p>
             </div>
           </div>
         </header>

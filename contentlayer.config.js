@@ -64,6 +64,7 @@ const Project = defineDocumentType(() => ({
     description: { type: "string", required: true },
     impact: { type: "string", required: true },
     skills: { type: "list", of: { type: "string" }, required: true },
+    technologies: { type: "list", of: { type: "string" }, required: true },
     stats: { type: "list", of: { type: "json" }, required: true },
     summary: { type: "mdx", required: true },
   },
