@@ -8,9 +8,9 @@ export default function TerminalCard() {
       {/* terminal header */}
       <div className="py-2 px-4 flex items-center">
         <div className="flex space-x-1.5">
-          <div className="w-3 h-3 bg-red-400 rounded-full"></div>
-          <div className="w-3 h-3 bg-yellow-400 rounded-full"></div>
-          <div className="w-3 h-3 bg-green-400 rounded-full"></div>
+          <div className="w-3 h-3 bg-red-400 hover:bg-red-400/85 rounded-full"></div>
+          <div className="w-3 h-3 bg-yellow-400 hover:bg-yellow-400/85 rounded-full"></div>
+          <div className="w-3 h-3 bg-green-400 hover:bg-green-400/85 rounded-full"></div>
         </div>
       </div>
 
