@@ -34,7 +34,7 @@ const About = defineDocumentType(() => ({
     firstName: { type: "string", required: true },
     nickName: { type: "string", required: true },
     lastName: { type: "string", required: true },
-    jobTitle: { type: "list", of: { type: "string" }, required: true },
+    jobTitle: { type: "string", required: true },
     blurb: { type: "mdx", required: false },
     facts: { type: "json", required: true },
   },

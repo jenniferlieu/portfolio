@@ -15,10 +15,8 @@ export default function Hero() {
             HELLO, WORLD! <div className="text-2xl animate-wave">👋</div>
           </h2>
           <h1 className="text-text text-4xl font-bold">
-            I'm <span className="text-primary">{about.nickName}</span>, a{" "}
-            <span className="text-primary">
-              {about.jobTitle.join(" & ").toLowerCase()}
-            </span>
+            I'm <span className="text-primary">{about.firstName}</span>, a{" "}
+            <span className="text-primary">{about.jobTitle.toLowerCase()}</span>
             .
           </h1>
           {about.blurb && (

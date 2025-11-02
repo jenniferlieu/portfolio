@@ -16,7 +16,7 @@ export async function generateMetadata({ params }) {
   if (!project) notFound();
 
   const siteInfo = allSiteInfos[0];
-  const title = `${siteInfo.title} - ${project.title}`;
+  const title = `${project.title} - ${siteInfo.title}`;
   const url = `${siteInfo.url}/project/${project.slug}`;
 
   return {

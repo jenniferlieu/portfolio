@@ -5,7 +5,7 @@ import { allNavLinks, allAbouts } from "contentlayer/generated";
 
 export default function Header() {
   const navLinks = allNavLinks[0].navLinks;
-  const nickName = allAbouts[0].nickName;
+  const firstName = allAbouts[0].firstName;
   const lastName = allAbouts[0].lastName;
   const faviconSize = 25;
   const headerLinkStyles = "font-semibold  active:text-primary";
@@ -19,7 +19,7 @@ export default function Header() {
           className={`${headerLinkStyles} flex items-center gap-1`}>
           <Favicon alt="favicon" width={faviconSize} height={faviconSize} />
           <span className="hidden md:inline">
-            {nickName} {lastName}
+            {firstName} {lastName}
           </span>
         </Link>
 
