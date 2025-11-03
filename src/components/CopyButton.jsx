@@ -18,7 +18,7 @@ export default function CopyButton({ children, textToCopy, className }) {
   return (
     <button
       onClick={handleClick}
-      className={`cursor-pointer inline-block relative ${className}`}>
+      className={`cursor-pointer inline-block relative hover:text-primary ${className}`}>
       {copied && (
         <div className="absolute z-10 bottom-full mb-[0.5em] left-1/2 tranform -translate-x-1/2 rounded-md bg-bg px-2 py-1 text-text border border-border">
           <div className="text-sm">Copied!</div>

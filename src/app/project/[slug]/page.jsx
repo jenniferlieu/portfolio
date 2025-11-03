@@ -1,11 +1,10 @@
 import { notFound } from "next/navigation";
 import { allProjects, allSiteInfos } from "contentlayer/generated";
-import ArrowleftIcon from "../../../assets/ArrowLeftIcon.svg";
 import { getMDXComponent } from "next-contentlayer2/hooks";
 import Image from "next/image";
-import Link from "next/link";
 import ExternalLink from "../../../components/ExternalLink";
-import ButtonPrimary from "../../../components/ButtonPrimary";
+import Button from "../../../components/Button";
+import SubpageLayout from "../../../components/layout/SubpageLayout";
 
 export async function generateStaticParams() {
   return allProjects.map((project) => ({ slug: project.slug }));
@@ -17,7 +16,7 @@ export async function generateMetadata({ params }) {
   if (!project) notFound();
 
   const siteInfo = allSiteInfos[0];
-  const title = `${siteInfo.title} - ${project.title}`;
+  const title = `${project.title} - ${siteInfo.title}`;
   const url = `${siteInfo.url}/project/${project.slug}`;
 
   return {
@@ -56,16 +55,7 @@ export default async function ProjectPage({ params }) {
   const MDXContent = getMDXComponent(project.body.code);
 
   return (
-    <main className="max-w-page-width mx-auto py-page-padding-y px-page-padding-x lg:px-page-padding-x-lg space-y-8">
-      {/* Back to Home button */}
-      <Link href="/" className="inline-flex items-center gap-2 group">
-        <ArrowleftIcon
-          size={20}
-          className="transition-transform duration-300 ease-out group-hover:-translate-x-1 group-focus:-translate-x-1 group-active:-translate-x-1"
-        />
-        <span className="font-semibold">Home</span>
-      </Link>
-
+    <SubpageLayout>
       <article className="space-y-8">
         {/* Header */}
         <header className="space-y-10">
@@ -112,8 +102,8 @@ export default async function ProjectPage({ params }) {
             </div>
             {/* Stats: Row 2 */}
             <div>
-              <p className="font-bold text-primary">Skills</p>
-              <p>{project.skills.join(", ")}</p>
+              <p className="font-bold text-primary">Tech Stack</p>
+              <p>{project.technologies.join(", ")}</p>
             </div>
           </div>
         </header>
@@ -132,21 +122,17 @@ export default async function ProjectPage({ params }) {
         {/* Footer */}
         <footer className="flex justify-between">
           {previousProjectSlug ? (
-            <ButtonPrimary href={`/project/${previousProjectSlug}`}>
-              Previous
-            </ButtonPrimary>
+            <Button href={`/project/${previousProjectSlug}`}>Previous</Button>
           ) : (
             <div></div>
           )}
           {nextProjectSlug ? (
-            <ButtonPrimary href={`/project/${nextProjectSlug}`}>
-              Next
-            </ButtonPrimary>
+            <Button href={`/project/${nextProjectSlug}`}>Next</Button>
           ) : (
             <div></div>
           )}
         </footer>
       </article>
-    </main>
+    </SubpageLayout>
   );
 }

@@ -13,6 +13,7 @@ const SiteInfo = defineDocumentType(() => ({
     keywords: { type: "string", required: true },
     url: { type: "string", required: true },
     author: { type: "string", required: true },
+    footer: { type: "mdx", required: true },
   },
 }));
 
@@ -21,8 +22,8 @@ const NavLinks = defineDocumentType(() => ({
   filePathPattern: `nav-links.yaml`,
   contentType: "data",
   fields: {
-    internalLinks: { type: "list", of: { type: "json" }, required: true },
-    externalLinks: { type: "list", of: { type: "json" }, required: false },
+    navLinks: { type: "list", of: { type: "json" }, required: true },
+    sectionLinks: { type: "list", of: { type: "json" }, required: false },
   },
 }));
 
@@ -33,8 +34,8 @@ const About = defineDocumentType(() => ({
   fields: {
     firstName: { type: "string", required: true },
     lastName: { type: "string", required: true },
-    jobTitle: { type: "list", of: { type: "string" }, required: true },
-    blurb: { type: "string", required: true },
+    jobTitle: { type: "string", required: true },
+    blurb: { type: "mdx", required: false },
     facts: { type: "json", required: true },
   },
 }));
@@ -63,6 +64,7 @@ const Project = defineDocumentType(() => ({
     description: { type: "string", required: true },
     impact: { type: "string", required: true },
     skills: { type: "list", of: { type: "string" }, required: true },
+    technologies: { type: "list", of: { type: "string" }, required: true },
     stats: { type: "list", of: { type: "json" }, required: true },
     summary: { type: "mdx", required: true },
   },

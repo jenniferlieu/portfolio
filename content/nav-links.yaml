@@ -1,7 +1,12 @@
-internalLinks:
+navLinks:
+  - label: "Projects"
+    url: "/"  
   - label: "About"
-    url: "/#about"
+    url: "/about"
+sectionLinks:
   - label: "Projects"
     url: "/#projects"
+    title: "Featured Projects"
   - label: "Contact"
     url: "/#contact"
+    title: "Let's Connect"

@@ -6,8 +6,8 @@
   /* Change themeColor in app/layout.jsx to match the background */
   --bg: hsl(0, 0%, 10%);
   
-  --text: hsl(0, 0%, 95%);
-  --text-muted: hsl(218, 14%, 84%);
+  --text: hsl(0, 0%, 90%);
+  --text-muted: hsl(218, 14%, 70%);
 
   --border: hsl(32, 21%, 45%);
   --border-muted: hsl(31, 12%, 17%);
@@ -16,7 +16,6 @@
   --shadow: var(--shadow-lg) hsl(32, 21%, 30%);
   
   --primary: hsl(28, 100%, 50%);
-  --secondary: hsl(95 30% 49%);
 
   --shadow-lg: 0 10px 15px -3px;
 
@@ -40,7 +39,6 @@
   --color-border-light: var(--border-light);
 
   --color-primary: var(--primary);
-  --color-secondary: var(--secondary);
 
   --shadow-shadow: var(--shadow);
 
@@ -76,6 +74,6 @@ h1 {
 }
 
 /* Applies to Link Component as well */
-a {
-  @apply hover:text-primary focus:text-primary active:text-primary;
+a:not(.no-hover) {
+  @apply hover:text-primary active:text-primary;
 }

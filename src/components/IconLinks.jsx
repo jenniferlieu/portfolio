@@ -29,11 +29,10 @@ export default function IconLinks({ size = 25 }) {
     },
   ];
 
-  const iconStyles =
-    "text-border hover:text-primary focus:text-primary active:text-primary w-10 h-10 inline-flex items-center justify-center";
+  const iconStyles = "text-border inline-flex items-center justify-center";
 
   return (
-    <div className="flex">
+    <div className="flex gap-3">
       {socialLinks.map((linkObj) => (
         <ExternalLink
           key={linkObj.key}
