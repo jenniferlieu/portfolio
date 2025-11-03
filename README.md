@@ -1,11 +1,12 @@
 # Portfolio Website
 My developer portfolio website built with Next.js, Tailwind CSS, and Contentlayer. Hosted on Vercel.
 
-Website: https://jenlieu.com
+Website: https://www.jenlieu.com
 
 ![Vercel](https://vercelbadge.vercel.app/api/jenniferlieu/jenlieu.com)
 
-<img width="1496" height="934" alt="Screenshot of jenlieu.com" src="https://github.com/user-attachments/assets/1b779547-7af3-4850-82a6-876395e22c5c" />
+<img width="1496" height="934" alt="Dark-themed screenshot of Jennifer's portfolio homepage showing a two-column hero section with a greeting on the left and a terminal-style facts panel on the right, with the start of the featured projects section below."
+ src="https://github.com/user-attachments/assets/1b779547-7af3-4850-82a6-876395e22c5c" />
 
 ## 🛠️ Installation and Setup
 1. Clone this repo

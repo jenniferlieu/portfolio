@@ -54,12 +54,12 @@ The current mainstream gaming platforms primarily focus on online multiplayer ex
 Our goal was to create a prototype of an engaging and user-friendly platform that fostered a sense of community among offline gamers, encouraging them to step away from their screens and enjoy the social aspects of gaming in person. 
 
 Inspired by Pokemon GO, we decided to base the functionalities of the app on a 2D map. The envisioned platform offers features such as:
-- **Location Services**: Google Maps integration helps users find open groups and connect with local gamers.
-- **Group Creation and Management**: Users can create, share, and join gaming groups, called "Beacons".
-- **Real-Time Updates**: Users receive updates about upcoming sessions, group activities, and new member requests live as they happen without refreshing the app.
-- **User Profiles**: Gamers can create detailed profiles showcasing their favorite games, play styles, and availability.
+- **Location Services**: Google Maps integration helps users find open groups and connect with local gamers
+- **Group Creation and Management**: Users can create, share, and join gaming groups, called "Beacons"
+- **Real-Time Updates**: Users receive updates about upcoming sessions, group activities, and new member requests live as they happen without refreshing the app
+- **User Profiles**: Gamers can create detailed profiles showcasing their favorite games, play styles, and availability
 
-To achieve this goal, we decided to use React for the frontend, Laravel for the baceknd, and MongoDB for the database. We eventually swiched over to PostgreSQL due to support for geospatial queries and structured relational data.
+To achieve this goal, we decided to use React for the frontend, Laravel for the backend, and MongoDB for the database. We eventually swiched over to PostgreSQL due to support for geospatial queries and structured relational data.
 
 ## Process
 Our team began by storyboarding ideas with sticky notes to visualize the user flow, then defined high-level requirements through a detailed project proposal and abstract. Despite our sprint-based approach, our workflow often leaned toward a waterfall approach. We held weekly standups and sprint reviews to showcase live demos of new or updated features. We used Jira to for project management, GitHub for version control, Discord for team communication, and Docusaurus for documentation.
@@ -78,6 +78,13 @@ We initially chose MongoDB as our database due to its flexibility. However, as w
 **Action:** I began to suspect that our database choice might not be the best fit for our needs when I realized our data might be more structured and relational than we initially thought. It really started to show its limitations when we began implementing geospatial data. After prototyping with PostgreSQL locally, I confirmed the ease of use and support for geospatial data and proposed switching to PostgreSQL.
 
 **Outcome:** After discussing my findings with the team, we decided to switch to PostgreSQL. The transition required some effort, but ultimately, it allowed us to implement the location-based features more effectively and handle our relational data more easily.
+
+### Challenge: Implementing Live Game Search with IGDB API
+We wanted to implement a live search feature using IGDB's API to allow users to quickly find games by name and to retrieve and populate game data. However, IGDB's built-in search functionalities were limited and did not provide the level of search relevancy we desired.
+
+**Action:** I researched and experimented with IGDB's API regular search and fuzzy search to increase the search relevancy. The results were still not as we had imagined and were actually worse than the regular search.
+
+**Outcome:** I discussed my findings with the team, and we decided that this was beyond our capabilities within the time constraints and the scope of the project. We opted to implement IGDB's regular search functionality, which still provided a decent user experience.
 
 ### Challenge: Learning to Collaborate and Delegate Backend Tasks
 As a team of mostly inexperienced backend developers, we struggled with direction and our own capabilities. As the first person who had set up the backend environment, I unintentionally became the default leader of the backend team. I had difficulty delegating appropriate tasks to team members, often leaving them idle as most of the backend work consisted of research and writing modified boilerplate code. It didn't help that I also took on a significant portion of the backend work myself. This led to burnout on my part and frustration among team members who felt underutilized.

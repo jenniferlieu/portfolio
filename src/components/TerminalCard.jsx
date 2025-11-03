@@ -4,18 +4,18 @@ export default function TerminalCard() {
   const factsObj = allAbouts[0].facts;
 
   return (
-    <div className="border border-border rounded-lg overflow-hidden shadow-card">
+    <div className="p-4 border border-border rounded-lg overflow-hidden shadow-card">
       {/* terminal header */}
-      <div className="py-2 px-4 flex items-center">
-        <div className="flex space-x-1.5">
-          <div className="w-3 h-3 bg-red-400 hover:bg-red-400/85 rounded-full"></div>
-          <div className="w-3 h-3 bg-yellow-400 hover:bg-yellow-400/85 rounded-full"></div>
-          <div className="w-3 h-3 bg-green-400 hover:bg-green-400/85 rounded-full"></div>
+      <div className="flex items-center">
+        <div className="flex mb-4 items-center space-x-2">
+          <div className="w-3 h-3 bg-red-500 hover:bg-red-400 rounded-full"></div>
+          <div className="w-3 h-3 bg-yellow-500 hover:bg-yellow-400 rounded-full"></div>
+          <div className="w-3 h-3 bg-green-500 hover:bg-green-400 rounded-full"></div>
         </div>
       </div>
 
       {/* terminal interface */}
-      <div className="p-6 pt-4 font-mono text-xs space-y-4">
+      <div className="font-mono text-xs space-y-4">
         {Object.entries(factsObj).map(([key, value]) => (
           <div key={key}>
             {/* command */}
