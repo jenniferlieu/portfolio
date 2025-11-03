@@ -26,7 +26,7 @@ export default function Hero() {
           )}
           <IconLinks size={22} />
         </div>
-        <div className="lg:w-5/12">
+        <div className="lg:w-4/12">
           <TerminalCard />
         </div>
       </div>

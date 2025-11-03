@@ -37,8 +37,7 @@ export default async function About() {
 
   return (
     <SubpageLayout>
-      <h1>About Little Ol' Me</h1>
-      <h2 className="font-mono">Loading brain....</h2>
+      <h1 className="font-mono">Loading brain....</h1>
       <article className="prose prose-invert max-w-none">
         <MDXContent />
       </article>
