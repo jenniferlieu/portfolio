@@ -5,8 +5,8 @@ Website: https://www.jenlieu.com
 
 ![Vercel](https://vercelbadge.vercel.app/api/jenniferlieu/jenlieu.com)
 
-<img width="1496" height="934" alt="Dark-themed screenshot of Jennifer's portfolio homepage showing a two-column hero section with a greeting on the left and a terminal-style facts panel on the right, with the start of the featured projects section below."
- src="https://github.com/user-attachments/assets/1b779547-7af3-4850-82a6-876395e22c5c" />
+ <img width="1496" height="934" alt="Dark-themed screenshot of Jennifer's portfolio homepage showing a two-column hero section with a greeting on the left and a terminal-style facts panel on the right, with the start of the featured projects section below." src="https://github.com/user-attachments/assets/8bf30c48-7c5b-4f04-b5ae-c4f54ba6737f" />
+
 
 ## 🛠️ Installation and Setup
 1. Clone this repo
